@@ -1,0 +1,39 @@
+.advertising-services {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  .service {
+    display: inline-block;
+    height: 100%;
+    width: calc(25% - 6px);
+    color: $gray-color;
+    padding-top: 40px;
+    position: relative;
+    text-align: center;
+    background-color: #f2f2f2;
+    .service-wrapper {
+      display: inline-block;
+    }
+    .icon {
+      width: 70px;
+      height: 70px;
+      margin-right: 15px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    .title {
+      font-weight: 700;
+      text-align: left;
+      font-size: 1.3rem;
+      margin-top: 6px;
+    }
+    .description {
+      text-align: left;
+      margin-top: 8px;
+    }
+  }
+}

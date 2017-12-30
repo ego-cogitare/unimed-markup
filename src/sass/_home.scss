@@ -1,0 +1,41 @@
+#home-slider-01 {
+  height: 595px;
+  margin-bottom: 20px;
+  .swiper-slide {
+    @extend .slider-bg;
+    .btn {
+      width: 338px;
+      height: 64px;
+      background-color: #ffffff;
+      color: #000000;
+      line-height: 69px;
+      margin: 365px 0 0 102px;
+      font-size: 1.4rem;
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+  .btn-prev,
+  .btn-next {
+    z-index: 999;
+    position: absolute;
+    cursor: pointer;
+    left: 20px;
+    top: 50%;
+    transition: all 0.5s 0s;
+    transform: translateY(-50%);
+    &:hover {
+      left: 10px;
+    }
+  }
+  .btn-next {
+    right: 20px;
+    left: auto;
+    &:hover {
+      right: 10px;
+      left: auto;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+#brands-slider {
+  .swiper-wrapper {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    .swiper-slide {
+      @extend .slider-bg;
+      width: calc(16.666% - 4px);
+      margin-right: 4px;
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 90%;
+        height: 92%;
+        top: calc(4% - 1px);
+        left: calc(5% - 1px);
+        border: 1px solid $light-gray-color;
+      }
+      .figure {
+        padding-top: 117%;
+      }
+      .title {
+        width: 100%;
+        position: absolute;
+        top: 40%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 2rem;
+      }
+      .btn-green {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 15%;
+        width: 50%;
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

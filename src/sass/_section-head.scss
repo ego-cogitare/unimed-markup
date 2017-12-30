@@ -1,0 +1,32 @@
+.section-header {
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 55px;
+  .title-wrapper {
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      height: 1px;
+      background-color: $light-gray-color;
+      z-index: -1;
+    }
+    .title {
+      text-transform: uppercase;
+      display: inline-block;
+      background: #ffffff;
+      padding: 0 45px;
+      font-size: 1.8rem;
+    }
+  }
+  .description {
+    padding-top: 10px;
+    &:empty {
+      display: none;
+    }
+  }
+}

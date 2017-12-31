@@ -1,0 +1,36 @@
+.blog-preview {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: -50px;
+  .post {
+    width: calc(25% - 90px);
+    margin-bottom: 50px;
+    .picture {
+      position: relative;
+      position: relative;
+      height: calc(25vw - 140px);
+      overflow: hidden;
+      img {
+        transition: all 0.3s 0s;
+        width: 100%;
+        object-fit: cover;
+      }
+      &:hover {
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+    .title {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.1rem;
+      padding: 50px 0 14px;
+    }
+    .description {
+      text-align: center;
+      color: #777;
+    }
+  }
+}

@@ -39,3 +39,21 @@
     }
   }
 }
+.btns-section {
+  text-align: center;
+  margin-top: 50px;
+  .btn {
+    display: inline-block;
+    width: 236px;
+    height: 44px;
+    line-height: 44px;
+    font-size: 1rem;
+    font-weight: 400;
+    &.load-more {
+      margin-right: 25px;
+    }
+  }
+  &.btns-blog {
+    margin-bottom: 55px;
+  }
+}

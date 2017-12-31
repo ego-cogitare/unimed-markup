@@ -6,7 +6,6 @@
     .swiper-slide {
       @extend .slider-bg;
       width: calc(16.666% - 4px);
-      margin-right: 4px;
       &:before {
         position: absolute;
         content: '';
@@ -41,6 +40,30 @@
           text-decoration: none;
         }
       }
+    }
+  }
+  .btn-prev,
+  .btn-next {
+    z-index: 999;
+    position: absolute;
+    cursor: pointer;
+    left: 24px;
+    top: 50%;
+    transition: all 0.5s 0s;
+    transform: translateY(-50%);
+    &:hover {
+      left: 14px;
+    }
+    &.hide {
+      opacity: 0;
+    }
+  }
+  .btn-next {
+    right: 24px;
+    left: auto;
+    &:hover {
+      right: 14px;
+      left: auto;
     }
   }
 }

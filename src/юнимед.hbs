@@ -16,11 +16,27 @@
     <div class="wrapper">
       {{> section-head title='Новинки' description='впервые в продаже' }}
     </div>
+    {{> products-list new='true' }}
     <div class="wrapper">
       {{> section-head title='Акция' description='лимитированные товары' }}
     </div>
+    {{> products-list sale='true' }}
+    <div class="wrapper btns-section btns-products">
+      <div class="btn load-more">
+        загрузить еще
+      </div>
+      <div class="btn btn-green see-all">
+        посмотреть все
+      </div>
+    </div>
     <div class="wrapper">
       {{> section-head title='Блог' description='полезные статьи' }}
+    </div>
+    {{> blog-preview }}
+    <div class="wrapper btns-section btns-blog">
+      <div class="btn read-all">
+        читать все
+      </div>
     </div>
     {{> advertising-services }}
     <footer style="height: 246px"></footer>

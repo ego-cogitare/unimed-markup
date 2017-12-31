@@ -1,0 +1,24 @@
+<div class="wrapper">
+  <div class="products-list">
+    {{#if new}}
+      {{> product type='new' picture='product-01.jpg' brand='Le Pain des fleurts' name='луковые хлебцы' price='$ 75.00'}}
+      {{> product type='new' picture='product-02.jpg' brand='BioSolis' name='SPF 50+' price='$ 75.00'}}
+      {{> product type='new' picture='product-03.jpg' brand='Medela' name='бутылочка' price='$ 75.00'}}
+      {{> product type='new' picture='product-04.jpg' brand='Le Pain des fleurts' name='луковые хлебцы' price='$ 75.00'}}
+      {{> product type='new' picture='product-01.jpg' brand='Le Pain des fleurts' name='луковые хлебцы' price='$ 75.00'}}
+      {{> product type='new' picture='product-02.jpg' brand='BioSolis' name='SPF 50+' price='$ 75.00'}}
+      {{> product type='new' picture='product-01.jpg' brand='Le Pain des fleurts' name='луковые хлебцы' price='$ 75.00'}}
+      {{> product type='new' picture='product-01.jpg' brand='Le Pain des fleurts' name='луковые хлебцы' price='$ 75.00'}}
+      {{> product type='new' picture='product-04.jpg' brand='Le Pain des fleurts' name='луковые хлебцы' price='$ 75.00'}}
+      {{> product type='new' picture='product-03.jpg' brand='Medela' name='бутылочка' price='$ 75.00'}}
+    {{/if}}
+
+    {{#if sale}}
+      {{> product type='sale' picture='product-01.jpg' brand='Le Pain des fleurts' name='луковые хлебцы' price='$ 75.00'}}
+      {{> product type='sale' picture='product-02.jpg' brand='BioSolis' name='SPF 50+' price='$ 75.00'}}
+      {{> product type='sale' picture='product-03.jpg' brand='Medela' name='бутылочка' price='$ 75.00'}}
+      {{> product type='sale' picture='product-04.jpg' brand='Le Pain des fleurts' name='луковые хлебцы' price='$ 75.00'}}
+      {{> product type='sale' picture='product-01.jpg' brand='Le Pain des fleurts' name='луковые хлебцы' price='$ 75.00'}}
+    {{/if}}
+  </div>
+</div>

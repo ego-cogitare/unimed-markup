@@ -1,3 +1,70 @@
 footer {
-  
+  margin-top: 56px;
+  border-top: 2px solid #f2f2f2;
+  padding: 16px 0 50px 0;
+  .copyrights {
+    width: 30%;
+    line-height: 1.4rem;
+    .logo {
+      padding-bottom: 8px;
+    }
+  }
+  .links {
+    width: 32%;
+    .columns {
+      list-style: none;
+      li {
+        display: inline-block;
+        vertical-align: top;
+        padding: 16px 0 20px 0;
+        width: 48%;
+        a {
+          text-decoration: none;
+          color: inherit;
+          &:hover {
+            color: $green-color;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  .pay-cards {
+    padding-top: 16px;
+    .cards-list {
+      list-style: none;
+      width: 204px;
+      padding-top: 22px;
+      li {
+        display: inline-block;
+      }
+    }
+  }
+  .contacts {
+    text-align: right;
+    padding-top: 13px;
+    a {
+      color: inherit;
+      text-decoration: none;
+      line-height: 1.4rem;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .email {
+      padding: 8px 0;
+    }
+    .socials {
+      a {
+        color: #b6b6b6;
+        border: 2px solid #b6b6b6;
+        width: 28px;
+        height: 28px;
+        &:before {
+          font-size: 1.0rem;
+          line-height: 25px;
+        }
+      }
+    }
+  }
 }

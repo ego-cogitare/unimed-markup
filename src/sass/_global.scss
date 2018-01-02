@@ -89,6 +89,10 @@ body {
   text-decoration: line-through;
 }
 
+.text-small {
+  font-size: 0.95rem;
+}
+
 .fw-100 {
   font-weight: 100;
 }
@@ -163,4 +167,27 @@ body {
   line-height: 37px;
   background-color: #7dbb00;
   border: 2px solid transparent;
+}
+
+.color-green {
+  color: $green-color;
+}
+
+.color-gray {
+  color: $gray-color;
+}
+
+.heading-1 {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+
+.heading-3 {
+  @extend .heading-1;
+  font-size: 1.1rem;
+}
+
+.heading-4 {
+  @extend .heading-1;
+  font-size: 0.95rem;
 }

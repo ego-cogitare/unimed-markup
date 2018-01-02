@@ -1,0 +1,30 @@
+.socials {
+  .item {
+    display: inline-block;
+    &:last-child {
+      a {
+        margin-right: 0;
+      }
+    }
+  }
+  a {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    display: block;
+    border-radius: 50%;
+    margin-right: 3px;
+    &:before {
+      font-size: 0.85rem;
+      position: absolute;
+      font-family: 'FontAwesome';
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      line-height: 20px;
+      text-align: center;
+    }
+  }
+}

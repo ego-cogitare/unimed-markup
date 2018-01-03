@@ -1,16 +1,171 @@
-.sitebar {
-  padding: 50px 75px 0 0;
-  .menu {
-    list-style: none;
-    .item {
-      padding: 10px 0;
-      line-height: 1.5rem;
-      a {
-        color: inherit;
-        text-decoration: none;
-        &:hover {
-          color: $green-color;
+.catalog {
+  .sitebar {
+    padding-top: 50px;
+    float: left;
+    .menu {
+      list-style: none;
+      padding-right: 75px;
+      .item {
+        padding: 10px 0;
+        line-height: 1.5rem;
+        a {
+          color: inherit;
+          text-decoration: none;
+          display: block;
+          &:hover {
+            color: $green-color;
+          }
         }
+      }
+    }
+    .filter {
+      border-top: 1px solid $light-gray-color;
+      width: calc(100% - 20px);
+      margin-top: 65px;
+      .btn-green {
+        width: 177px;
+        height: 44px;
+        line-height: 42px;
+        font-size: 0.98rem;
+        font-weight: 400;
+        margin: 43px 0;
+        i {
+          margin-right: 10px;
+        }
+      }
+      .range {
+        margin: 18px 0 45px;
+        .slider-container {
+          .selected-bar {
+            background-color: $green-color;
+            background-image: none;
+          }
+          .clickable-dummy {
+          }
+          &.theme-green {
+            .back-bar {
+              height: 3px;
+              background-color: $light-gray-color;
+              background-image: none;
+              border-radius: 0;
+              .pointer {
+                left: -6px;
+                background-image: none;
+                background: #ffffff;
+                border: 3px solid $green-color;
+                top: -6px;
+                width: 16px;
+                height: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .tags-wrapper {
+      margin-top: 55px;
+      .heading-3 {
+        padding-bottom: 8px;
+      }
+      .tags {
+        list-style: none;
+        .tag {
+          margin-top: 9px;
+          input[type="checkbox"] {
+            display: none;
+          }
+          label {
+            position: relative;
+            display: block;
+            text-indent: 25px;
+            cursor: pointer;
+            &:before {
+              content: '';
+              display: block;
+              width: 12px;
+              height: 12px;
+              position: absolute;
+              top: 0;
+              left: 0;
+              border: 1px solid #000000;
+            }
+          }
+          input[type="checkbox"]:checked + label {
+            &:before {
+              background-color: $green-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  .content {
+    float: left;
+    width: calc(100% - 296px);
+    padding: 0 55px;
+    border-left: 1px solid $light-gray-color;
+    margin-left: -1px;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: -1px;
+      bottom: 0;
+      width: 1px;
+      height: 172px;
+      background-color: #ffffff;
+    }
+    .catalog-options {
+      margin: 20px 0;
+      .options {
+        display: inline-block;
+        list-style: none;
+        margin-right: 80px;
+        .option {
+          display: inline-block;
+          border-bottom: 1px solid $light-gray-color;
+          margin: 0 8px;
+          cursor: pointer;
+          position: relative;
+          &.title {
+            border-bottom: none;
+            margin-right: 20px;
+          }
+          &.active {
+            color: $green-color;
+            border-bottom: none;
+          }
+          &.desc,
+          &.asc {
+            margin-right: 25px;
+            &:after {
+              color: #777;
+              position: absolute;
+              right: -10px;
+              top: 0;
+              font-family: 'FontAwesome';
+              content: "\f176";
+            }
+          }
+          &.desc:after {
+            content: "\f175";
+          }
+        }
+      }
+    }
+    .products-list {
+      .product {
+        width: 25%;
+      }
+    }
+    .pagination {
+      padding: 20px 0 50px;
+    }
+    .text-block {
+      padding: 60px 0;
+      .heading-3 {
+        line-height: 2.2rem;
+        margin-bottom: 25px;
       }
     }
   }

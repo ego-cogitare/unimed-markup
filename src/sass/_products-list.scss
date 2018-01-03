@@ -1,8 +1,6 @@
 .products-list {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: -25px;
   .product {
     width: 20%;
     text-align: center;
@@ -38,7 +36,7 @@
       }
     }
     .product-wrapper {
-      width: 70%;
+      // width: 70%;
       margin: 0 auto;
       padding: 10px 0 20px;
       &:hover {

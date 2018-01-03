@@ -40,17 +40,34 @@ $(document).ready(function() {
     }.bind(this)
   });
 
-  $(window).bind('resize', function() {
-    var width = $('body').width();
-    
-    if (width >= 1680)                      brandSlider.params.slidesPerView = 6;
-    else if (width >= 1367 && width < 1680) brandSlider.params.slidesPerView = 5;
-    else if (width > 1024 && width < 1367)  brandSlider.params.slidesPerView = 4;
-    else if (width >= 768 && width <= 1024) brandSlider.params.slidesPerView = 3;
-    else                                    brandSlider.params.slidesPerView = 1;
-    brandSlider.update();
+  // $(window).bind('resize', function() {
+  //   var width = $('body').width();
+  //
+  //   if (width >= 1680)                      brandSlider.params.slidesPerView = 6;
+  //   else if (width >= 1367 && width < 1680) brandSlider.params.slidesPerView = 5;
+  //   else if (width > 1024 && width < 1367)  brandSlider.params.slidesPerView = 4;
+  //   else if (width >= 768 && width <= 1024) brandSlider.params.slidesPerView = 3;
+  //   else                                    brandSlider.params.slidesPerView = 1;
+  //   brandSlider.update();
+  // });
+  // $(window).trigger('resize');
+
+  $('#price-range').jRange({
+    from: 0,
+    to: 900,
+    step: 1,
+    // scale: [0, 25, 50, 75, 100],
+    scale: [],
+    format: '%s',
+    width: 'calc(100% - 25px)',
+    showLabels: false,
+    isRange : true,
+    onstatechange: function(value) {
+      var values = value.split(',');
+      $('#price-range-from').text(values[0]);
+      $('#price-range-to').text(values[1]);
+    }
   });
-  $(window).trigger('resize');
 
   // $(window).bind('scroll', function(e) {
   //   $(window).scrollTop() > 50

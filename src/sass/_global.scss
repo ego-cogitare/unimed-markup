@@ -201,3 +201,14 @@ body {
   width: 296px;
   border-right: 1px solid $light-gray-color;
 }
+
+.content {
+  padding: 0 55px 55px 55px;
+  margin-bottom: 55px;
+  .text-block {
+    .heading-3 {
+      line-height: 2.2rem;
+      margin-bottom: 25px;
+    }
+  }
+}

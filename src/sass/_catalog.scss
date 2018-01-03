@@ -1,6 +1,5 @@
 .catalog {
   .sitebar {
-    padding-top: 50px;
     float: left;
     .menu {
       list-style: none;
@@ -106,15 +105,6 @@
     border-left: 1px solid $light-gray-color;
     margin-left: -1px;
     position: relative;
-    &:before {
-      content: '';
-      position: absolute;
-      left: -1px;
-      bottom: 0;
-      width: 1px;
-      height: 172px;
-      background-color: #ffffff;
-    }
     .catalog-options {
       margin: 20px 0;
       .options {
@@ -161,12 +151,8 @@
     .pagination {
       padding: 20px 0 50px;
     }
-    .text-block {
-      padding: 60px 0;
-      .heading-3 {
-        line-height: 2.2rem;
-        margin-bottom: 25px;
-      }
+    .hr {
+      margin-bottom: 40px;
     }
   }
 }

@@ -191,3 +191,8 @@ body {
   @extend .heading-1;
   font-size: 0.95rem;
 }
+
+.sitebar {
+  width: 296px;
+  border-right: 1px solid $light-gray-color;
+}

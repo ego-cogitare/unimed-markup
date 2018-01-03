@@ -1,0 +1,17 @@
+.sitebar {
+  padding: 50px 75px 0 0;
+  .menu {
+    list-style: none;
+    .item {
+      padding: 10px 0;
+      line-height: 1.5rem;
+      a {
+        color: inherit;
+        text-decoration: none;
+        &:hover {
+          color: $green-color;
+        }
+      }
+    }
+  }
+}

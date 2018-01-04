@@ -180,6 +180,11 @@ body {
   font-size: 1.8rem;
 }
 
+.heading-2 {
+  @extend .heading-1;
+  font-size: 1.4rem;
+}
+
 .heading-3 {
   @extend .heading-1;
   font-size: 1.1rem;

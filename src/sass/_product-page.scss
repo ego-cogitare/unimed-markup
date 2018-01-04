@@ -1,0 +1,86 @@
+.product-page {
+  .product-view {
+    .column {
+      width: 668px;
+      &:last-child {
+        width: 640px;
+      }
+      .history {
+        .products-list {
+          .product {
+            width: 50%;
+          }
+        }
+      }
+      .general-info {
+        width: 472px;
+        .sku-brand {
+          color: #AAAAAA;
+          height: 56px;
+          line-height: 56px;
+          .divider {
+            margin: 0 30px;
+            border-left: 1px solid $light-gray-color;
+            font-size: 1.7rem;
+          }
+        }
+        .price {
+          font-size: 2.3rem;
+          width: 265px;
+          padding-top: 50px;
+          span {
+            display: block;
+            &.old {
+              font-size: 1.5rem;
+              color: #AAAAAA;
+              text-decoration: line-through;
+            }
+          }
+        }
+        .counter {
+          text-align: center;
+          padding-top: 38px;
+          .timer {
+            line-height: 48px;
+            font-size: 2.0rem;
+            .digit {
+              display: inline-block;
+              span {
+                display: inline-block;
+                width: 26px;
+                height: 45px;
+                background: url('../img/products/counter-bg.png') no-repeat center center;
+              }
+            }
+          }
+        }
+        .buy-btns {
+          padding: 40px 0 25px;
+          .btn {
+            width: 50%;
+            line-height: 42px;
+            height: 42px;
+            font-size: 1rem;
+            font-weight: 400;
+          }
+        }
+      }
+      .awards {
+        width: calc(100% - 472px);
+        .award {
+          text-align: right;
+          margin-bottom: 32px;
+        }
+      }
+    }
+  }
+  .text-block {
+    padding: 30px 200px 100px;
+    .heading-3 {
+      padding-bottom: 25px;
+    }
+  }
+  .section-header {
+    margin: 52px 0 25px;
+  }
+}

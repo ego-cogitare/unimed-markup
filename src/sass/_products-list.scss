@@ -35,6 +35,20 @@
         }
       }
     }
+    &.no-hover-border {
+      .product-wrapper {
+        &:hover {
+          box-shadow: none;
+        }
+      }
+    }
+    &.no-hover-btn {
+      .product-wrapper {
+        .btn-buy {
+          display: none;
+        }
+      }
+    }
     .product-wrapper {
       // width: 70%;
       margin: 0 auto;

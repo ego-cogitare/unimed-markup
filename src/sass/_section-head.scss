@@ -2,6 +2,20 @@
   text-align: center;
   margin-top: 125px;
   margin-bottom: 55px;
+  &.text-left {
+    .title-wrapper {
+      .heading-1 {
+        padding-right: 10px;
+      }
+    }
+  }
+  &.text-right {
+    .title-wrapper {
+      .heading-1 {
+        padding-left: 10px;
+      }
+    }
+  }
   .title-wrapper {
     position: relative;
     &:before {

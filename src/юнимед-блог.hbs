@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> head }}
+  </head>
+
+  <body>
+    {{> header-menu }}
+    {{> header }}
+    {{> page-title current-page='Блог' title='блог' }}
+
+    <div class="wrapper blog clear">
+      <div class="content">
+        <div class="posts">
+          {{> post tag='#органика'    date='12.05.2017' title='органический интернационал и евролисток' picture='img/blog/post-01.jpg' }}
+          {{> post tag='#для_дома'    date='12.05.2017' title='ПОЧЕМУ ХОЗЯЙКИ ВО НАЧАЛИ ПЕРЕХОДИТЬ НА органическую химию?' picture='img/blog/post-02.jpg' }}
+          {{> post tag='#органика'    date='12.05.2017' title='органический интернационал и евролисток' picture='img/blog/post-03.jpg' }}
+          {{> post tag='#шампунь'     date='12.05.2017' title='ОРГАНИЧЕСКИЕ ШАМПУНИ URTEKRAM ЛЕЧАТ' picture='img/blog/post-04.jpg' }}
+          {{> post tag='#еда'         date='12.05.2017' title='«ДЕТСКИЕ» МЮСЛИ ДЛЯ САМЫХ МАЛЕНЬКИХ' picture='img/blog/post-05.jpg' }}
+          {{> post tag='#еда'         date='12.05.2017' title='GLUTEN FREE' picture='img/blog/post-06.jpg' }}
+          {{> post tag='#еда'         date='12.05.2017' title='GLUTEN FREE' picture='img/blog/post-01.jpg' }}
+          {{> post tag='#образ_жизни' date='12.05.2017' title='Журнал для тех,  кто ведет здоровый  образ жизни' picture='img/blog/post-02.jpg' }}
+          {{> post tag='#для_дома'    date='12.05.2017' title='органический интернационал и евролисток' picture='img/blog/post-03.jpg' }}
+        </div>
+      </div>
+      <div class="sitebar">
+        <div class="heading-1">
+          поиск по тегам:
+        </div>
+        <ul class="tags-list fw-600">
+          <li class="tag">
+            <a href="#">#шампунь</a>,
+          </li>
+          <li class="tag">
+            <a href="#">#органическая_косметика</a>,
+          </li>
+          <li class="tag">
+            <a href="#">#BabyBjörn</a>,
+          </li>
+          <li class="tag">
+            <a href="#">#Urtekram</a>,
+          </li>
+          <li class="tag">
+            <a href="#">#Biosolis</a>,
+          </li>
+          <li class="tag">
+            <a href="#">#NaturGreen</a>,
+          </li>
+          <li class="tag">
+            <a href="#">#Medela</a>,
+          </li>
+          <li class="tag">
+            <a href="#">#Ecomil</a>
+          </li>
+        </ul>
+
+        <ul class="widgets">
+          <li class="widget">
+            <a href="#">
+              <img src="img/sitebar/widget-facebook.jpg" alt="Facebook" />
+            </a>
+          </li>
+          <li class="widget">
+            <a href="#">
+              <img src="img/sitebar/widget-vk.jpg" alt="VK" />
+            </a>
+          </li>
+          <li class="widget">
+            <a href="#">
+              <img src="img/sitebar/widget-instagram.jpg" alt="Instagram" />
+            </a>
+          </li>
+          <li class="widget">
+            <a href="#">
+              <img src="img/sitebar/widget-banner.jpg" alt="Banner" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    {{> advertising-services }}
+    {{> footer }}
+  </body>
+</html>

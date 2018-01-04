@@ -1,0 +1,29 @@
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  .post {
+    width: 33.333%;
+    .post-wrapper {
+      width: calc(100% - 80px);
+      .picture {
+        height: calc(33vw - 265px);
+        overflow: hidden;
+        margin-bottom: 10px;
+        &:hover {
+          img {
+            transform: scale(1.05);
+          }
+        }
+        img {
+          transition: all 0.3s 0s;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .heading-1 {
+        margin-top: 15px;
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 .catalog {
   .sitebar {
     float: left;
+    border-right: 1px solid $light-gray-color;
     .menu {
       list-style: none;
       padding-right: 75px;
@@ -100,7 +101,6 @@
   }
   .content {
     float: left;
-    width: calc(100% - 296px);
     padding: 0 55px;
     border-left: 1px solid $light-gray-color;
     margin-left: -1px;

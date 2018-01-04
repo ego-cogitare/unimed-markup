@@ -1,0 +1,18 @@
+.categories-list {
+  .category {
+    width: calc(16.666666% - 14px);
+    float: left;
+    margin-right: 16px;
+    &:nth-child(6n) {
+      margin-right: 0;
+    }
+    .category-wrapper {
+      border: 1px solid $green-color;
+      .picture {
+        height: calc(16.666666vw - 20px);
+        overflow: hidden;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

@@ -3,12 +3,10 @@
   <head>
     {{> head }}
   </head>
-
   <body>
     {{> header-menu }}
     {{> header }}
     {{> page-title current-page='Блог' title='блог' }}
-
     <div class="wrapper blog clear">
       <div class="content">
         <div class="posts">
@@ -27,33 +25,7 @@
         <div class="heading-1">
           поиск по тегам:
         </div>
-        <ul class="tags-list fw-600">
-          <li class="tag">
-            <a href="#">#шампунь</a>,
-          </li>
-          <li class="tag">
-            <a href="#">#органическая_косметика</a>,
-          </li>
-          <li class="tag">
-            <a href="#">#BabyBjörn</a>,
-          </li>
-          <li class="tag">
-            <a href="#">#Urtekram</a>,
-          </li>
-          <li class="tag">
-            <a href="#">#Biosolis</a>,
-          </li>
-          <li class="tag">
-            <a href="#">#NaturGreen</a>,
-          </li>
-          <li class="tag">
-            <a href="#">#Medela</a>,
-          </li>
-          <li class="tag">
-            <a href="#">#Ecomil</a>
-          </li>
-        </ul>
-
+        {{> search-by-tags }}
         <ul class="widgets">
           <li class="widget">
             <a href="#">
@@ -78,7 +50,6 @@
         </ul>
       </div>
     </div>
-
     {{> advertising-services }}
     {{> footer }}
   </body>

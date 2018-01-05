@@ -1,9 +1,59 @@
 .product-page {
   .product-view {
     .column {
-      width: 668px;
+      &:first-child {
+        width: 840px;
+        padding-left: 172px;
+      }
       &:last-child {
-        width: 640px;
+        padding-left: 60px;
+      }
+      .product-picture {
+        margin-bottom: 100px;
+      }
+      .product-thumbnails {
+        height: 455px;
+        width: 76px;
+        position: relative;
+        padding-top: 65px;
+        .swiper-container {
+          height: 326px;
+          .swiper-wrapper {
+            list-style: none;
+            .swiper-slide {
+              background-repeat: no-repeat;
+              background-size: contain;
+              cursor: pointer;
+              &.swiper-slide-active {
+                border: 1px solid $green-color;
+              }
+            }
+          }
+        }
+        .navigate {
+          width: 34px;
+          height: 34px;
+          line-height: 31px;
+          position: absolute;
+          border-radius: 50%;
+          top: 0;
+          left: 21px;
+          background-color: #f7f7f7;
+          color: #cccccc;
+          text-align: center;
+          font-size: 2rem;
+          cursor: pointer;
+          &.button-next {
+            line-height: 36px;
+            top: auto;
+            bottom: 0;
+          }
+        }
+      }
+      .product-photo {
+        width: 592px;
+        height: 455px;
+        text-align: center;
       }
       .history {
         .products-list {
@@ -64,9 +114,71 @@
             font-weight: 400;
           }
         }
+        .tabs-wrapper {
+          margin-top: 25px;
+          .tabs {
+            list-style: none;
+            border-bottom: 1px solid #2d2d2d;
+            li {
+              display: block;
+              height: 42px;
+              line-height: 42px;
+              padding: 0 25px;
+              border: 1px solid #2d2d2d;
+              border-bottom: none;
+              text-transform: uppercase;
+              &.active {
+                background-color: #2d2d2d;
+                color: #ffffff;
+              }
+              a {
+                color: inherit;
+                text-decoration: none;
+                display: block;
+                width: 100;
+                height: 100%;
+              }
+            }
+          }
+          .tabs-content {
+            .tab-content {
+              display: none;
+              line-height: 1.5rem;
+              &.visible {
+                display: block;
+              }
+              .properties {
+                padding: 25px 0;
+              }
+              .btn-youtube {
+                height: 56px;
+                line-height: 60px;
+                margin-top: 30px;
+                border: none;
+                background-color: #e14e42;
+                color: #ffffff;
+                font-size: 1.5rem;
+                font-weight: 600;
+                i {
+                  font-size: 2.3rem;
+                  vertical-align: middle;
+                  margin-right: 10px;
+                }
+                a {
+                  display: block;
+                  width: 100%;
+                  height: 100%;
+                  color: inherit;
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
       }
       .awards {
-        width: calc(100% - 472px);
+        // width: calc(100% - 470px);
+        padding-left: 65px;
         .award {
           text-align: right;
           margin-bottom: 32px;

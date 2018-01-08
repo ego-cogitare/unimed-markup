@@ -139,6 +139,39 @@
     .delivery-payment-info {
       width: 50%;
       float: left;
+      .heading-1 {
+        padding-bottom: 40px;
+      }
+      .delivery,
+      .payment {
+        padding-bottom: 50px;
+      }
+      .btn-green {
+        display: inline-block;
+      }
+      .radio-label {
+        position: relative;
+        display: block;
+        padding-left: 26px;
+        width: 400px;
+        height: 35px;
+        &:before {
+          display: block;
+          content: '';
+          width: 16px;
+          height: 16px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          background: url('../img/radio-unchecked.png') no-repeat center center;
+        }
+        span {
+          float: right;
+        }
+      }
+      input[type="radio"]:checked + .radio-label:before {
+        background-image: url('../img/radio-checked.png');
+      }
     }
   }
 }

@@ -26,7 +26,8 @@ header {
           color: #000000;
           font: inherit;
           display: block;
-          &:hover {
+          &:hover,
+          &.active {
             color: $green-color;
           }
         }

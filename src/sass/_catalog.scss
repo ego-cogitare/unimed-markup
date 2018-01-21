@@ -2,6 +2,7 @@
   .sitebar {
     float: left;
     border-right: 1px solid $light-gray-color;
+    margin-bottom: 55px;
     .menu {
       list-style: none;
       padding-right: 75px;
@@ -12,7 +13,8 @@
           color: inherit;
           text-decoration: none;
           display: block;
-          &:hover {
+          &:hover,
+          &.active {
             color: $green-color;
           }
         }
@@ -140,6 +142,10 @@
           &.desc:after {
             content: "\f175";
           }
+          a {
+            color: inherit;
+            text-decoration: none;
+          }
         }
       }
     }
@@ -147,6 +153,9 @@
       .product {
         width: 25%;
       }
+    }
+    .products-list + .hr {
+      margin-top: 50px;
     }
     .pagination {
       padding: 20px 0 50px;

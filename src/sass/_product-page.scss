@@ -24,7 +24,8 @@
               background-repeat: no-repeat;
               background-size: contain;
               cursor: pointer;
-              &.swiper-slide-active {
+              background-position: center center;
+              &.active {
                 border: 1px solid $green-color;
               }
             }
@@ -53,7 +54,14 @@
       .product-photo {
         width: 592px;
         height: 455px;
+        line-height: 455px;
         text-align: center;
+        img {
+          width: 90%;
+          max-height: 100%;
+          vertical-align: middle;
+          object-fit: contain;
+        }
       }
       .history {
         .products-list {

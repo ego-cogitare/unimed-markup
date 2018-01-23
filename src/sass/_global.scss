@@ -214,13 +214,14 @@ body {
   padding: 0 55px 55px 55px;
   margin-bottom: 55px;
   width: calc(100% - 296px);
-  .text-block {
-    .heading-3, H3 {
-      line-height: 2.2rem;
-      margin-bottom: 25px;
-    }
-    p {
-      @extend .text;
-    }
+}
+
+.text-block {
+  .heading-3, H3 {
+    line-height: 2.2rem;
+    margin-bottom: 25px;
+  }
+  p {
+    @extend .text;
   }
 }

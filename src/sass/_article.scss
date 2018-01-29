@@ -67,7 +67,7 @@
         .post-wrapper {
           width: 100%;
           .picture {
-            height: calc(25vw - 186px);
+            height: calc(25vw - 216px);
           }
           .heading-1 {
             border-bottom: none;
@@ -85,6 +85,45 @@
               color: $green-color;
             }
           }
+        }
+      }
+    }
+    .comments {
+      .comment-wrapper {
+        padding-top: 50px;
+        .quote {
+          width: 100px;
+          padding-top: 45px;
+        }
+        .comment {
+          width: calc(100% - 100px);
+          padding-bottom: 25px;
+          min-height: 120px;
+          .user-date {
+            padding-bottom: 20px;
+          }
+        }
+        .hr {
+          width: calc(100% - 180px);
+        }
+      }
+      .post-comment {
+        width: 60%;
+        padding: 50px 0 30px 100px;
+        .form-row {
+          margin-bottom: 20px;
+          .input {
+            height: 36px;
+            padding: 0 12px;
+            border: 1px solid $light-gray-color;
+            &.textarea {
+              height: 100px;
+              padding-top: 8px;
+            }
+          }
+        }
+        .btn-green {
+          display: inline-block;
         }
       }
     }

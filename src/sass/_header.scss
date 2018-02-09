@@ -19,7 +19,7 @@ header {
         height: 100%;
         font-size: 1.3rem;
         font-weight: 100;
-        padding: 0 45px;
+        padding: 0 35px;
         a {
           text-transform: uppercase;
           text-decoration: none;
@@ -59,10 +59,11 @@ header {
         }
         &.expanded {
           .input {
-            width: 200px;
+            width: 165px;
             border: 1px solid $light-gray-color;
             padding: 0 10px;
             margin-right: 8px;
+            @include respond-to(notebook) { width: 10px;}
           }
         }
       }

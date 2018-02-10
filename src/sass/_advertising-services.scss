@@ -3,6 +3,16 @@
   height: 150px;
   display: flex;
   justify-content: space-between;
+  @include respond-to(hd) {
+    height: 125px;
+  }
+  @include respond-to(notebook) {
+    height: 120px;
+  }
+  @include respond-to(laptop) {
+    height: auto;
+    flex-wrap: wrap;
+  }
   .service {
     display: inline-block;
     height: 100%;
@@ -12,6 +22,18 @@
     position: relative;
     text-align: center;
     background-color: #f2f2f2;
+    @include respond-to(hd) {
+      padding-top: 25px;
+    }
+    @include respond-to(notebook) {
+      padding-top: 25px;
+    }
+    @include respond-to(laptop) {
+      padding-top: 25px;
+      width: calc(50% - 6px);
+      height: 118px;
+      margin-bottom: 12px;
+    }
     .service-wrapper {
       display: inline-block;
     }
@@ -19,6 +41,18 @@
       width: 70px;
       height: 70px;
       margin-right: 15px;
+      @include respond-to(hd) {
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+        margin-top: 6px;
+      }
+      @include respond-to(notebook) {
+        width: 60px;
+        height: 60px;
+        margin-right: 5px;
+        margin-top: 6px;
+      }
       img {
         width: 100%;
         height: 100%;

@@ -16,8 +16,28 @@
       float: left;
       margin-right: 16px;
       margin-bottom: 32px;
-      &:nth-child(6n) {
-        margin-right: 0;
+      @include respond-to(fullhd) {
+        &:nth-child(6n) {
+          margin-right: 0;
+        }
+      }
+      @include respond-to(hd) {
+        &:nth-child(6n) {
+          margin-right: 0;
+        }
+      }
+      @include respond-to(notebook) {
+        &:nth-child(6n) {
+          margin-right: 0;
+        }
+      }
+      @include respond-to(laptop) {
+        &:nth-child(4n) {
+          margin-right: 0;
+        }
+      }
+      @include respond-to(laptop) {
+        width: calc(25% - 14px);
       }
       .category-wrapper {
         border: 1px solid $green-color;
@@ -32,6 +52,9 @@
         }
         .picture {
           height: calc(16.666666vw - 60px);
+          @include respond-to(laptop) {
+            height: calc(25vw - 60px);
+          }
           overflow: hidden;
           width: calc(100% - 40px);
           margin: 10px auto 10px;
@@ -58,8 +81,14 @@
   }
   .text-block {
     padding: 50px 200px 100px;
-    .heading-3 {
-      padding-bottom: 25px;
+    @include respond-to(hd) {
+      padding: 40px 100px 60px;
+    }
+    @include respond-to(notebook) {
+      padding: 40px 100px 60px;
+    }
+    @include respond-to(laptop) {
+      padding: 40px 100px 60px;
     }
   }
 }

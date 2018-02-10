@@ -63,11 +63,11 @@ $(document).ready(function() {
     $(window).bind('resize', function() {
       var width = $('body').width();
 
-      if (width >= 1680)                      brandSlider.params.slidesPerView = 6;
-      else if (width >= 1367 && width < 1680) brandSlider.params.slidesPerView = 5;
-      else if (width > 1024 && width < 1367)  brandSlider.params.slidesPerView = 4;
-      else if (width >= 768 && width <= 1024) brandSlider.params.slidesPerView = 3;
-      else                                    brandSlider.params.slidesPerView = 1;
+      if (width >= 1680)                       brandSlider.params.slidesPerView = 6;
+      else if (width >= 1366 && width < 1680)  brandSlider.params.slidesPerView = 5;
+      else if (width > 1024 && width < 1366)   brandSlider.params.slidesPerView = 4;
+      else if (width >= 768 && width <= 1024)  brandSlider.params.slidesPerView = 3;
+      else                                     brandSlider.params.slidesPerView = 1;
       brandSlider.update();
     });
     $(window).trigger('resize');

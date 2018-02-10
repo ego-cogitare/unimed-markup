@@ -3,12 +3,33 @@
   flex-wrap: wrap;
   .post {
     width: 33.333%;
+    @include respond-to(laptop) {
+      width: 50%;
+    }
     .post-wrapper {
       width: calc(100% - 80px);
+      @include respond-to(hd) {
+        width: calc(100% - 40px);
+      }
+      @include respond-to(notebook) {
+        width: calc(100% - 40px);
+      }
+      @include respond-to(laptop) {
+        width: calc(100% - 20px);
+      }
       .picture {
         height: calc(33vw - 265px);
         overflow: hidden;
         margin-bottom: 10px;
+        @include respond-to(hd) {
+          height: calc(33vw - 158px);
+        }
+        @include respond-to(notebook) {
+          height: calc(33vw - 158px);
+        }
+        @include respond-to(laptop) {
+          height: calc(50vw - 178px);
+        }
         &:hover {
           img {
             transform: scale(1.05);

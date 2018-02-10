@@ -1,6 +1,15 @@
 #home-slider-01 {
   height: 595px;
   margin-bottom: 20px;
+  @include respond-to(hd) {
+    height: 495px;
+  }
+  @include respond-to(notebook) {
+    height: 400px;
+  }
+  @include respond-to(laptop) {
+    height: 330px;
+  }
   .swiper-slide {
     @extend .slider-bg;
     .btn {
@@ -12,6 +21,12 @@
       margin: 365px 0 0 102px;
       font-size: 1.4rem;
       border: none;
+      @include respond-to(notebook) {
+        margin: 320px 0 0 88px;
+      }
+      @include respond-to(laptop) {
+        margin: 240px 0 0 32px;
+      }
       a {
         text-decoration: none;
         color: inherit;

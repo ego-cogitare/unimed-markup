@@ -15,6 +15,9 @@ header {
       list-style-type: none;
       display: flex;
       line-height: 102px;
+      @include respond-to(laptop) {
+        display: none;
+      }
       .item {
         height: 100%;
         font-size: 1.3rem;
@@ -63,7 +66,6 @@ header {
             border: 1px solid $light-gray-color;
             padding: 0 10px;
             margin-right: 8px;
-            @include respond-to(notebook) { width: 10px;}
           }
         }
       }

@@ -1,12 +1,31 @@
 .product-page {
+  text-align: center;
   .product-view {
+    display: inline-block;
     .column {
       &:first-child {
-        width: 840px;
-        padding-left: 172px;
+        width: 670px;
+        @include respond-to(hd) {
+          width: 640px;
+          padding-left: 50px;
+        }
+        @include respond-to(notebook) {
+          width: 620px;
+          padding-left: 30px;
+        }
+        @include respond-to(laptop) {
+          width: 620px;
+          padding-left: 30px;
+        }
       }
       &:last-child {
         padding-left: 60px;
+        @include respond-to(notebook) {
+          padding-left: 38px;
+        }
+        @include respond-to(laptop) {
+          padding-left: 38px;
+        }
       }
       .product-picture {
         margin-bottom: 100px;
@@ -16,6 +35,18 @@
         width: 76px;
         position: relative;
         padding-top: 65px;
+        @include respond-to(hd) {
+          height: 400px;
+          padding-top: 36px;
+        }
+        @include respond-to(notebook) {
+          height: 400px;
+          padding-top: 36px;
+        }
+        @include respond-to(laptop) {
+          height: 400px;
+          padding-top: 36px;
+        }
         .swiper-container {
           height: 326px;
           .swiper-wrapper {
@@ -56,6 +87,21 @@
         height: 455px;
         line-height: 455px;
         text-align: center;
+        @include respond-to(hd) {
+          width: 492px;
+          height: 400px;
+          line-height: 400px;
+        }
+        @include respond-to(notebook) {
+          width: 492px;
+          height: 400px;
+          line-height: 400px;
+        }
+        @include respond-to(laptop) {
+          width: 492px;
+          height: 400px;
+          line-height: 400px;
+        }
         img {
           width: 90%;
           max-height: 100%;
@@ -72,6 +118,15 @@
       }
       .general-info {
         width: 472px;
+        @include respond-to(hd) {
+          width: 436px;
+        }
+        @include respond-to(notebook) {
+          width: 436px;
+        }
+        @include respond-to(laptop) {
+          width: 436px;
+        }
         .sku-brand {
           color: #AAAAAA;
           height: 56px;
@@ -167,6 +222,7 @@
                   margin-left: 6px;
                 }
                 .review {
+                  text-align: left;
                   .rating{
                     display: inline-block;
                     position: relative;
@@ -262,17 +318,45 @@
       .awards {
         // width: calc(100% - 470px);
         padding-left: 65px;
+        @include respond-to(hd) {
+          padding-left: 45px;
+        }
+        @include respond-to(notebook) {
+          padding-left: 25px;
+        }
+        @include respond-to(laptop) {
+          padding-left: 25px;
+        }
         .award {
           text-align: right;
           margin-bottom: 32px;
+          img {
+            width: 112px;
+            object-fit: contain;
+            @include respond-to(hd) {
+              width: 95px;
+            }
+            @include respond-to(notebook) {
+              width: 95px;
+            }
+            @include respond-to(laptop) {
+              width: 95px;
+            }
+          }
         }
       }
     }
   }
   .text-block {
     padding: 30px 200px 100px;
-    .heading-3 {
-      padding-bottom: 25px;
+    @include respond-to(hd) {
+      padding: 30px 100px 50px;
+    }
+    @include respond-to(notebook) {
+      padding: 30px 100px 50px;
+    }
+    @include respond-to(laptop) {
+      padding: 30px 100px 50px;
     }
   }
   .section-header {

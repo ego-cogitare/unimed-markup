@@ -28,10 +28,34 @@
       width: 596px;
       float: left;
       margin-bottom: 215px;
+      @include respond-to(hd) {
+        width: 450px;
+        margin-bottom: 165px;
+      }
+      @include respond-to(notebook) {
+        width: 450px;
+        margin-bottom: 165px;
+      }
+      @include respond-to(laptop) {
+        width: 350px;
+        margin-bottom: 200px;
+      }
       .map {
         width: 435px;
         height: 378px;
         position: relative;
+        @include respond-to(hd) {
+          width: 335px;
+          height: 291px;
+        }
+        @include respond-to(notebook) {
+          width: 335px;
+          height: 291px;
+        }
+        @include respond-to(laptop) {
+          width: 275px;
+          height: 239px;
+        }
         &:before {
           content: '';
           position: absolute;
@@ -53,6 +77,37 @@
           height: 452px;
           border: 1px solid $light-gray-color;
           z-index: -1;
+          @include respond-to(hd) {
+            left: 120px;
+            width: 275px;
+            height: 374px;
+          }
+          @include respond-to(notebook) {
+            left: 120px;
+            width: 275px;
+            height: 374px;
+          }
+          @include respond-to(laptop) {
+            left: 89px;
+            width: 230px;
+            height: 305px;
+          }
+        }
+        iframe {
+          width: 435px;
+          height: 378px;
+          @include respond-to(hd) {
+            width: 335px;
+            height: 291px;
+          }
+          @include respond-to(notebook) {
+            width: 335px;
+            height: 291px;
+          }
+          @include respond-to(laptop) {
+            width: 275px;
+            height: 239px;
+          }
         }
         .map-label {
           color: $light-gray-color;
@@ -65,6 +120,15 @@
           transform: rotate(90deg);
           text-align: right;
           font-weight: 500;
+          @include respond-to(hd) {
+            right: -70px;
+          }
+          @include respond-to(notebook) {
+            right: -70px;
+          }
+          @include respond-to(laptop) {
+            right: -56px;
+          }
           &:before {
             content: '';
             position: absolute;
@@ -83,6 +147,15 @@
       width: calc((100% - 596px) / 2);
       padding-top: 15px;
       color: #4a4a4a;
+      @include respond-to(hd) {
+        width: calc((100% - 450px) / 2);
+      }
+      @include respond-to(notebook) {
+        width: calc((100% - 450px) / 2);
+      }
+      @include respond-to(laptop) {
+        width: 280px;
+      }
       .heading-1 {
         padding-bottom: 14px;
       }

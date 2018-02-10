@@ -4,6 +4,15 @@
     padding: 0;
     margin: 0;
     width: calc(100% - 380px);
+    @include respond-to(hd) {
+      width: calc(100% - 300px);
+    }
+    @include respond-to(notebook) {
+      width: calc(100% - 300px);
+    }
+    @include respond-to(laptop) {
+      width: calc(100% - 300px);
+    }
     .posts {
       .post {
         margin-bottom: 92px;
@@ -26,6 +35,15 @@
   .sitebar {
     float: left;
     width: 380px;
+    @include respond-to(hd) {
+      width: 300px;
+    }
+    @include respond-to(notebook) {
+      width: 300px;
+    }
+    @include respond-to(laptop) {
+      width: 300px;
+    }
     .widgets {
       list-style: none;
       .widget {

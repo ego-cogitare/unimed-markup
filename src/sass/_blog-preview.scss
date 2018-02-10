@@ -6,11 +6,17 @@
   .post {
     width: calc(25% - 90px);
     margin-bottom: 50px;
+    @include respond-to(laptop) {
+      width: calc(25% - 40px);
+    }
     .picture {
       position: relative;
       position: relative;
       height: calc(25vw - 140px);
       overflow: hidden;
+      @include respond-to(laptop) {
+        height: calc(25vw - 46px);
+      }
       img {
         transition: all 0.3s 0s;
         width: 100%;
@@ -27,6 +33,9 @@
       font-weight: bold;
       font-size: 1.1rem;
       padding: 50px 0 14px;
+      @include respond-to(laptop) {
+        padding: 20px 0 14px;
+      }
     }
     .description {
       text-align: center;

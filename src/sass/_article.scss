@@ -6,6 +6,15 @@
     margin: 0;
     width: calc(100% - 430px);
     border-right: 1px solid $light-gray-color;
+    @include respond-to(hd) {
+      width: calc(100% - 340px);
+    }
+    @include respond-to(notebook) {
+      width: calc(100% - 340px);
+    }
+    @include respond-to(laptop) {
+      width: calc(100% - 340px);
+    }
     .body {
       padding-bottom: 50px;
       .tag-date {
@@ -61,13 +70,48 @@
         margin-bottom: 92px;
         width: calc(25% - 19px);
         margin-right: 25px;
-        &:nth-child(4n) {
-          margin-right: 0;
+        @include respond-to(fullhd) {
+          &:nth-child(4n) {
+            margin-right: 0;
+          }
+        }
+        @include respond-to(hd) {
+          width: calc(33% - 14px);
+        }
+        @include respond-to(hd) {
+          &:nth-child(3n) {
+            margin-right: 0;
+          }
+        }
+        @include respond-to(notebook) {
+          width: calc(50% - 13px);
+        }
+        @include respond-to(notebook) {
+          &:nth-child(2n) {
+            margin-right: 0;
+          }
+        }
+        @include respond-to(laptop) {
+          width: calc(50% - 13px);
+        }
+        @include respond-to(laptop) {
+          &:nth-child(2n) {
+            margin-right: 0;
+          }
         }
         .post-wrapper {
           width: 100%;
           .picture {
             height: calc(25vw - 216px);
+            @include respond-to(hd) {
+              height: calc(33vw - 207px);
+            }
+            @include respond-to(notebook) {
+              height: calc(50vw - 297px);
+            }
+            @include respond-to(laptop) {
+              height: calc(50vw - 297px);
+            }
           }
           .heading-1 {
             border-bottom: none;
@@ -134,6 +178,18 @@
     padding-left: 65px;
     border-left: 1px solid $light-gray-color;
     margin-left: -1px;
+    @include respond-to(hd) {
+      width: 340px;
+      padding-left: 40px;
+    }
+    @include respond-to(notebook) {
+      width: 340px;
+      padding-left: 40px;
+    }
+    @include respond-to(laptop) {
+      width: 340px;
+      padding-left: 40px;
+    }
     .products-list {
       padding-bottom: 60px;
       .product {

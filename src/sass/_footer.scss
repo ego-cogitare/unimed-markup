@@ -5,19 +5,38 @@ footer {
   .copyrights {
     width: 30%;
     line-height: 1.4rem;
+    @include respond-to(hd) {
+      width: 25%;
+    }
+    @include respond-to(notebook) {
+      width: 25%;
+    }
+    @include respond-to(laptop) {
+      width: 25%;
+    }
     .logo {
       padding-bottom: 8px;
     }
   }
   .links {
     width: 32%;
+    @include respond-to(laptop) {
+      width: 19%;
+    }
     .columns {
       list-style: none;
+      @include respond-to(laptop) {
+        padding-top: 16px;
+      }
       li {
         display: inline-block;
         vertical-align: top;
         padding: 16px 0 20px 0;
         width: 48%;
+        @include respond-to(laptop) {
+          width: 98%;
+          padding: 0 0 12px 0;
+        }
         a {
           text-decoration: none;
           color: inherit;

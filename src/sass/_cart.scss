@@ -1,6 +1,15 @@
 .cart-wrapper {
-  width: 68%;
+  width: 80%;
   margin: 0 auto;
+  @include respond-to(hd) {
+    width: 90%;
+  }
+  @include respond-to(notebook) {
+    width: 90%;
+  }
+  @include respond-to(laptop) {
+    width: 90%;
+  }
   .cart-products {
     .heading {
       background-color: $green-color;
@@ -106,6 +115,18 @@
   .order-wrapper {
     padding-top: 120px;
     padding-bottom: 136px;
+    @include respond-to(hd) {
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+    @include respond-to(notebook) {
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+    @include respond-to(laptop) {
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
     .customer-info {
       width: 50%;
       float: left;

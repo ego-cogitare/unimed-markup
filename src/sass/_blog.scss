@@ -11,7 +11,7 @@
       width: calc(100% - 300px);
     }
     @include respond-to(laptop) {
-      width: calc(100% - 300px);
+      width: calc(100% - 265px);
     }
     .posts {
       .post {
@@ -42,7 +42,7 @@
       width: 300px;
     }
     @include respond-to(laptop) {
-      width: 300px;
+      width: 265px;
     }
     .widgets {
       list-style: none;

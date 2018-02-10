@@ -1,6 +1,7 @@
 header {
   .header {
     height: 102px;
+    position: relative;
     .logo {
       position: absolute;
       a {
@@ -15,20 +16,47 @@ header {
       list-style-type: none;
       display: flex;
       line-height: 102px;
+      transition: all 0.3s 0s;
+      @include respond-to(hd) {
+        margin-right: 14px;
+      }
+      @include respond-to(notebook) {
+        position: absolute;
+        right: 102px;
+        height: 100%;
+      }
       @include respond-to(laptop) {
-        display: none;
+        position: absolute;
+        right: 106px;
+        max-width: calc(100% - 424px);
       }
       .item {
         height: 100%;
         font-size: 1.3rem;
         font-weight: 100;
         padding: 0 35px;
+        @include respond-to(hd) {
+          padding: 0 15px;
+        }
+        @include respond-to(notebook) {
+          padding: 0 24px;
+        }
+        @include respond-to(laptop) {
+          padding: 0 15px;
+          line-height: 103px;
+          height: 100%;
+        }
         a {
           text-transform: uppercase;
           text-decoration: none;
           color: #000000;
           font: inherit;
           display: block;
+          @include respond-to(laptop) {
+            vertical-align: middle;
+            line-height: 20px;
+            display: inline-block;
+          }
           &:hover,
           &.active {
             color: $green-color;
@@ -41,6 +69,10 @@ header {
       line-height: 102px;
       list-style-type: none;
       display: flex;
+      @include respond-to(laptop) {
+        right: 0;
+        position: absolute;
+      }
       li {
         font-size: 1.8rem;
         color: $gray-color;
@@ -61,11 +93,22 @@ header {
           vertical-align: middle;
         }
         &.expanded {
+          @include respond-to(notebook) {
+            background: white;
+            z-index: 999;
+            text-align: left;
+          }
           .input {
             width: 165px;
             border: 1px solid $light-gray-color;
             padding: 0 10px;
             margin-right: 8px;
+            @include respond-to(notebook) {
+              width: 250px;
+            }
+            @include respond-to(laptop) {
+              width: 250px;
+            }
           }
         }
       }

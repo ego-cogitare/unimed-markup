@@ -127,6 +127,20 @@ body {
   font-weight: 900;
 }
 
+@include respond-to(notebook) {
+  .fadeout {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@include respond-to(laptop) {
+  .fadeout {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 .input {
   height: 42px;
   border: none;

@@ -1,7 +1,8 @@
 $(document).ready(function() {
   $('.search-cart .fa-search').on('click', function(e) {
     e.preventDefault();
-    $(this).parent().toggleClass('expanded');
+    $(this).parent().toggleClass('expanded')
+      .parent().siblings('.menu').toggleClass('fadeout');
   });
 
   new Swiper('#home-slider-01', {
@@ -64,9 +65,9 @@ $(document).ready(function() {
       var width = $('body').width();
 
       if (width >= 1680)                       brandSlider.params.slidesPerView = 6;
-      else if (width >= 1366 && width < 1680)  brandSlider.params.slidesPerView = 5;
-      else if (width > 1024 && width < 1366)   brandSlider.params.slidesPerView = 4;
-      else if (width >= 768 && width <= 1024)  brandSlider.params.slidesPerView = 3;
+      else if (width >= 1280 && width < 1680)  brandSlider.params.slidesPerView = 5;
+      else if (width >= 1024 && width < 1280)  brandSlider.params.slidesPerView = 4;
+      else if (width >= 768 && width < 1024)   brandSlider.params.slidesPerView = 3;
       else                                     brandSlider.params.slidesPerView = 1;
       brandSlider.update();
     });

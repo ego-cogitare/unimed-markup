@@ -14,8 +14,8 @@
           padding-left: 30px;
         }
         @include respond-to(laptop) {
-          width: 620px;
-          padding-left: 30px;
+          width: 490px;
+          padding-left: 10px;
         }
       }
       &:last-child {
@@ -24,7 +24,7 @@
           padding-left: 38px;
         }
         @include respond-to(laptop) {
-          padding-left: 38px;
+          padding-left: 18px;
         }
       }
       .product-picture {
@@ -98,9 +98,9 @@
           line-height: 400px;
         }
         @include respond-to(laptop) {
-          width: 492px;
-          height: 400px;
-          line-height: 400px;
+          width: 400px;
+          height: 360px;
+          line-height: 360px;
         }
         img {
           width: 90%;
@@ -125,7 +125,7 @@
           width: 436px;
         }
         @include respond-to(laptop) {
-          width: 436px;
+          width: 358px;
         }
         .sku-brand {
           color: #AAAAAA;
@@ -141,6 +141,9 @@
           font-size: 2.3rem;
           width: 265px;
           padding-top: 50px;
+          @include respond-to(laptop) {
+            width: 186px;
+          }
           span {
             display: block;
             &.old {
@@ -175,6 +178,10 @@
             height: 42px;
             font-size: 1rem;
             font-weight: 400;
+            @include respond-to(laptop) {
+              font-size: 0.9rem;
+              white-space: nowrap;
+            }
           }
         }
         .tabs-wrapper {
@@ -325,11 +332,14 @@
           padding-left: 25px;
         }
         @include respond-to(laptop) {
-          padding-left: 25px;
+          padding-left: 15px;
         }
         .award {
           text-align: right;
           margin-bottom: 32px;
+          @include respond-to(laptop) {
+            margin-bottom: 22px;
+          }
           img {
             width: 112px;
             object-fit: contain;
@@ -340,7 +350,7 @@
               width: 95px;
             }
             @include respond-to(laptop) {
-              width: 95px;
+              width: 75px;
             }
           }
         }

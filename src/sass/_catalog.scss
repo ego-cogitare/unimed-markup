@@ -131,6 +131,9 @@
         display: inline-block;
         list-style: none;
         margin-right: 80px;
+        @include respond-to(laptop) {
+          margin-right: 24px;
+        }
         .option {
           display: inline-block;
           border-bottom: 1px solid $light-gray-color;
@@ -140,6 +143,9 @@
           &.title {
             border-bottom: none;
             margin-right: 20px;
+            @include respond-to(laptop) {
+              margin-right: 10px;
+            }
           }
           &.active {
             color: $green-color;
@@ -170,6 +176,9 @@
     .products-list {
       .product {
         width: 25%;
+        @include respond-to(laptop) {
+          width: 33%;
+        }
       }
     }
     .products-list + .hr {

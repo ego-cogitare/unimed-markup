@@ -6,14 +6,19 @@
   .post {
     width: calc(25% - 90px);
     margin-bottom: 50px;
+    @include respond-to(notebook) {
+      width: calc(25% - 60px);
+    }
     @include respond-to(laptop) {
       width: calc(25% - 40px);
     }
     .picture {
       position: relative;
-      position: relative;
       height: calc(25vw - 140px);
       overflow: hidden;
+      @include respond-to(notebook) {
+        height: calc(25vw - 76px);
+      }
       @include respond-to(laptop) {
         height: calc(25vw - 46px);
       }

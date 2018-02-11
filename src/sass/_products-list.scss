@@ -9,6 +9,8 @@
     }
     @include respond-to(phone) {
       width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
     }
     .icon {
       display: none;
@@ -80,6 +82,12 @@
         }
         @include respond-to(medium) {
           height: 200px;
+        }
+        @include respond-to(phone) {
+          height: 270px;
+          position: relative;
+          transition: all 0.3s 0s;
+          max-height: 220px;
         }
         img {
           max-height: 95%;

@@ -70,8 +70,11 @@ $(document).ready(function() {
       else if (width >= 768 && width < 1024)   brandSlider.params.slidesPerView = 3;
       else                                     brandSlider.params.slidesPerView = 1;
       brandSlider.update();
+
+      if (width >= 768 && width < 1024) {
+        $('.awards').insertBefore($('.general-info'));
+      }
     });
-    $(window).trigger('resize');
   }
 
   $('#price-range').jRange({
@@ -91,9 +94,18 @@ $(document).ready(function() {
     }
   });
 
-  // $(window).bind('scroll', function(e) {
-  //   $(window).scrollTop() > 50
-  //     ? $('body').addClass('small')
-  //     : $('body').removeClass('small');
-  // });
+  $('.burger-menu').on('click', function() {
+    $(this).toggleClass('opened');
+    $('.menu').toggleClass('opened');
+    $('html, body').toggleClass('no-scroll');
+  });
+
+  $(window).bind('resize', function() {
+    var width = $('body').width();
+
+    if (width >= 768 && width < 1024) {
+      $('.awards').insertBefore($('.general-info'));
+    }
+  })
+  .trigger('resize');
 });

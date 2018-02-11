@@ -17,6 +17,10 @@
     height: auto;
     flex-wrap: wrap;
   }
+  @include respond-to(phone) {
+    height: auto;
+    flex-wrap: wrap;
+  }
   .service {
     display: inline-block;
     height: 100%;
@@ -43,6 +47,12 @@
       width: calc(50% - 6px);
       height: 118px;
       margin-bottom: 12px;
+    }
+    @include respond-to(phone) {
+      padding-top: 10px;
+      width: 100%;
+      height: 94px;
+      margin-bottom: 6px;
     }
     .service-wrapper {
       display: inline-block;

@@ -15,6 +15,9 @@
     @include respond-to(medium) {
       width: calc(33.33333333% - 40px);
     }
+    @include respond-to(phone) {
+      width: 100%;
+    }
     .picture {
       position: relative;
       height: calc(25vw - 140px);
@@ -27,6 +30,11 @@
       }
       @include respond-to(medium) {
         height: calc(33vw - 48px);
+      }
+      @include respond-to(phone) {
+        height: calc(80vw - 20px);
+        width: 80%;
+        margin: 0 auto;
       }
       img {
         transition: all 0.3s 0s;
@@ -48,6 +56,9 @@
         padding: 20px 0 14px;
       }
       @include respond-to(medium) {
+        padding: 20px 0 14px;
+      }
+      @include respond-to(phone) {
         padding: 20px 0 14px;
       }
     }

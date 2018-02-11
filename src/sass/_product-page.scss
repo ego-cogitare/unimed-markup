@@ -18,7 +18,7 @@
           padding-left: 10px;
         }
         @include respond-to(medium) {
-          width: 490px;
+          width: 50%;
           padding-left: 10px;
         }
       }
@@ -32,6 +32,7 @@
         }
         @include respond-to(medium) {
           padding-left: 18px;
+          width: 50%;
         }
       }
       .product-picture {
@@ -55,11 +56,19 @@
           padding-top: 36px;
         }
         @include respond-to(medium) {
-          height: 400px;
+          width: 50px;
+          height: 290px;
           padding-top: 36px;
+          + .left {
+            width: calc(100% - 50px);
+            height: 290px;
+          }
         }
         .swiper-container {
           height: 326px;
+          @include respond-to(medium) {
+            height: 218px;
+          }
           .swiper-wrapper {
             list-style: none;
             .swiper-slide {
@@ -67,6 +76,9 @@
               background-size: contain;
               cursor: pointer;
               background-position: center center;
+              @include respond-to(medium) {
+                height: 50px !important;
+              }
               &.active {
                 border: 1px solid $green-color;
               }
@@ -86,6 +98,9 @@
           text-align: center;
           font-size: 2rem;
           cursor: pointer;
+          @include respond-to(medium) {
+            left: 10px;
+          }
           &.button-next {
             line-height: 36px;
             top: auto;
@@ -114,9 +129,9 @@
           line-height: 360px;
         }
         @include respond-to(medium) {
-          width: 400px;
-          height: 360px;
-          line-height: 360px;
+          width: 100%;
+          height: 100%;
+          line-height: 290px;
         }
         img {
           width: 90%;
@@ -144,7 +159,7 @@
           width: 358px;
         }
         @include respond-to(medium) {
-          width: 358px;
+          width: 100%;
         }
         .sku-brand {
           color: #AAAAAA;
@@ -164,7 +179,7 @@
             width: 186px;
           }
           @include respond-to(medium) {
-            width: 186px;
+            width: 50%;
           }
           span {
             display: block;
@@ -361,13 +376,17 @@
           padding-left: 15px;
         }
         @include respond-to(medium) {
-          padding-left: 15px;
+          padding-left: 0;
         }
         .award {
           text-align: right;
           margin-bottom: 32px;
           @include respond-to(laptop) {
             margin-bottom: 22px;
+          }
+          @include respond-to(medium) {
+            display: inline-block;
+            margin-bottom: 0;
           }
           img {
             width: 112px;
@@ -401,7 +420,7 @@
       padding: 30px 100px 50px;
     }
     @include respond-to(medium) {
-      padding: 30px 100px 50px;
+      padding: 30px 60px 50px;
     }
   }
   .section-header {

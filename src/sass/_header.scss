@@ -2,6 +2,9 @@ header {
   .header {
     height: 102px;
     position: relative;
+    @include respond-to(phone) {
+      height: 70px;
+    }
     .logo {
       position: absolute;
       a {
@@ -9,6 +12,9 @@ header {
         height: 100%;
         img {
           margin-top: 5px;
+          @include respond-to(phone) {
+            width: 210px;
+          }
         }
       }
     }
@@ -31,15 +37,40 @@ header {
         max-width: calc(100% - 424px);
       }
       @include respond-to(medium) {
-        position: absolute;
-        right: 106px;
-        max-width: calc(100% - 424px);
+        position: fixed;
+        width: 300px;
+        height: 100%;
+        display: block;
+        background: #222224;
+        right: -100%;
+        max-width: initial;
+        z-index: 999;
+        &.opened {
+          right: 0;
+        }
+      }
+      @include respond-to(phone) {
+        position: fixed;
+        width: 300px;
+        height: 100%;
+        display: block;
+        background: #222224;
+        right: -100%;
+        max-width: initial;
+        z-index: 999;
+        &.opened {
+          right: 0;
+        }
       }
       .item {
         height: 100%;
         font-size: 1.3rem;
         font-weight: 100;
         padding: 0 35px;
+        &.socials,
+        &.phones {
+          display: none;
+        }
         @include respond-to(hd) {
           padding: 0 15px;
         }
@@ -52,9 +83,46 @@ header {
           height: 100%;
         }
         @include respond-to(medium) {
-          padding: 0 15px;
-          line-height: 103px;
-          height: 100%;
+          padding: 20px 15px 0;
+          line-height: 60px;
+          height: 60px;
+          text-align: center;
+          color: #ffffff;
+          &.phones {
+            position: absolute;
+            bottom: 70px;
+            line-height: 20px;
+            font-size: 1rem;
+            width: 100%;
+            display: block;
+            .phones {
+              text-align: center;
+              width: 100%;
+              margin: 0 auto;
+              display: block;
+            }
+          }
+        }
+        @include respond-to(phone) {
+          padding: 20px 15px 0;
+          line-height: 60px;
+          height: 60px;
+          text-align: center;
+          color: #ffffff;
+          &.phones {
+            position: absolute;
+            bottom: 70px;
+            line-height: 20px;
+            font-size: 1rem;
+            width: 100%;
+            display: block;
+            .phones {
+              text-align: center;
+              width: 100%;
+              margin: 0 auto;
+              display: block;
+            }
+          }
         }
         a {
           text-transform: uppercase;
@@ -70,7 +138,12 @@ header {
           @include respond-to(medium) {
             vertical-align: middle;
             line-height: 20px;
-            display: inline-block;
+            color: inherit;
+          }
+          @include respond-to(phone) {
+            vertical-align: middle;
+            line-height: 20px;
+            color: inherit;
           }
           &:hover,
           &.active {
@@ -92,6 +165,12 @@ header {
         right: 0;
         position: absolute;
       }
+      @include respond-to(phone) {
+        right: 0;
+        position: absolute;
+        height: 70px;
+        line-height: 70px;
+      }
       li {
         font-size: 1.8rem;
         color: $gray-color;
@@ -103,6 +182,7 @@ header {
         }
       }
       .search {
+        background-color: #ffffff;
         .input {
           font-size: 1rem;
           width: 0;
@@ -128,7 +208,7 @@ header {
             @include respond-to(laptop) {
               width: 250px;
             }
-            @include respond-to(medium) {
+            @include respond-to(phone) {
               width: 250px;
             }
           }

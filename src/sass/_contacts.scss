@@ -1,6 +1,12 @@
 .contacts {
   .sitebar {
     padding-top: calc(55px + 15px);
+    @include respond-to(medium) {
+      padding-top: 0;
+      position: absolute;
+      right: 0;
+      margin-right: calc(7% + 15px);
+    }
     .widgets {
       .widget {
         i {
@@ -24,6 +30,11 @@
   }
   .content {
     padding-top: 55px;
+    @include respond-to(medium) {
+      width: 100%;
+      padding-left: 7%;
+      padding-bottom: 50px;
+    }
     .map-wrapper {
       width: 596px;
       float: left;
@@ -41,8 +52,8 @@
         margin-bottom: 200px;
       }
       @include respond-to(medium) {
-        width: 350px;
-        margin-bottom: 200px;
+        width: 100%;
+        margin-bottom: 74px;
       }
       .map {
         width: 435px;
@@ -177,7 +188,12 @@
         width: 280px;
       }
       @include respond-to(medium) {
-        width: 280px;
+        width: 321px;
+        &:last-child {
+          width: 200px;
+          float: right;
+          margin-right: calc(7% + 10px);
+        }
       }
       .heading-1 {
         padding-bottom: 14px;

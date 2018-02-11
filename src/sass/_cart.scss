@@ -26,6 +26,10 @@
     .product {
       height: 126px;
       line-height: 126px;
+      @include respond-to(medium) {
+        height: 90px;
+        line-height: 90px;
+      }
       .picture {
         img {
           vertical-align: middle;
@@ -49,6 +53,9 @@
           height: 30px;
           overflow: hidden;
           text-align: center;
+          @include respond-to(medium) {
+            margin-top: 30px;
+          }
           .amount {
             border: 2px solid darken($light-gray-color, 5);
             border-top: none;
@@ -80,9 +87,8 @@
         padding-right: 25px;
       }
       @include respond-to(medium) {
-        width: calc(100% - 922px);
         text-align: right;
-        padding-right: 25px;
+        padding-right: 0;
       }
       i {
         cursor: pointer;
@@ -100,8 +106,8 @@
           padding-left: 30px;
         }
         @include respond-to(medium) {
-          width: 120px;
-          padding-left: 30px;
+          width: 85px;
+          padding-left: 10px;
         }
       }
       &:nth-child(2) {
@@ -110,7 +116,7 @@
           width: 290px;
         }
         @include respond-to(medium) {
-          width: 290px;
+          width: calc(100% - 558px);
         }
       }
       &:nth-child(3) {
@@ -119,7 +125,7 @@
           width: 130px;
         }
         @include respond-to(medium) {
-          width: 130px;
+          width: 112px;
         }
       }
       &:nth-child(4) {
@@ -128,7 +134,7 @@
           width: 150px;
         }
         @include respond-to(medium) {
-          width: 150px;
+          width: 120px;
         }
       }
       &:nth-child(5) {
@@ -137,7 +143,7 @@
           width: 106px;
         }
         @include respond-to(medium) {
-          width: 106px;
+          width: 80px;
         }
       }
       &:nth-child(6) {
@@ -173,8 +179,8 @@
       padding-bottom: 90px;
     }
     @include respond-to(medium) {
-      padding-top: 90px;
-      padding-bottom: 90px;
+      padding-top: 70px;
+      padding-bottom: 60px;
     }
     .customer-info {
       width: 50%;

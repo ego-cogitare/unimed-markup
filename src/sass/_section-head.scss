@@ -18,6 +18,10 @@
     margin-top: 45px;
     margin-bottom: 25px;
   }
+  @include respond-to(phone) {
+    margin-top: 35px;
+    margin-bottom: 20px;
+  }
   &.text-left {
     .title-wrapper {
       .heading-1 {

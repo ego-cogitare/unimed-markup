@@ -127,6 +127,10 @@ body {
   font-weight: 900;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 @include respond-to(notebook) {
   .fadeout {
     opacity: 0;

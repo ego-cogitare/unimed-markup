@@ -14,14 +14,20 @@
       width: calc(100% - 265px);
     }
     @include respond-to(medium) {
-      width: calc(100% - 265px);
+      width: calc(100% - 200px);
     }
     .posts {
       .post {
         margin-bottom: 92px;
+        @include respond-to(medium) {
+          margin-bottom: 40px;
+        }
         .heading-1 {
           padding-bottom: 10px;
           border-bottom: 1px solid $light-gray-color;
+          @include respond-to(medium) {
+            font-size: 1.4rem;
+          }
         }
         .tag {
           a {
@@ -48,7 +54,7 @@
       width: 265px;
     }
     @include respond-to(medium) {
-      width: 265px;
+      width: 200px;
     }
     .widgets {
       list-style: none;

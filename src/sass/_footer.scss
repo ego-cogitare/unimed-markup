@@ -2,6 +2,12 @@ footer {
   margin-top: 56px;
   border-top: 2px solid #f2f2f2;
   padding: 16px 0 50px 0;
+  @include respond-to(medium) {
+    margin-top: 30px;
+  }
+  @include respond-to(phone) {
+    padding: 16px 0 10px 0;
+  }
   .copyrights {
     width: 30%;
     line-height: 1.4rem;
@@ -17,6 +23,10 @@ footer {
     @include respond-to(medium) {
       width: 50%;
     }
+    @include respond-to(phone) {
+      width: 100%;
+      text-align: center;
+    }
     .logo {
       padding-bottom: 8px;
     }
@@ -29,6 +39,11 @@ footer {
     @include respond-to(medium) {
       width: 50%;
       padding-top: 28px;
+    }
+    @include respond-to(phone) {
+      width: 100%;
+      text-align: center;
+      padding-top: 24px;
     }
     .columns {
       list-style: none;
@@ -48,6 +63,10 @@ footer {
           width: 98%;
           padding: 0 0 12px 0;
         }
+        @include respond-to(phone) {
+          width: 48%;
+          padding: 16px 0 0 0;
+        }
         a {
           text-decoration: none;
           color: inherit;
@@ -61,10 +80,19 @@ footer {
   }
   .pay-cards {
     padding-top: 16px;
+    @include respond-to(phone) {
+      padding-top: 38px;
+      width: 100%;
+      text-align: center;
+    }
     .cards-list {
       list-style: none;
       width: 204px;
       padding-top: 22px;
+      @include respond-to(phone) {
+        margin: 0 auto;
+        padding-top: 4px;
+      }
       li {
         display: inline-block;
       }
@@ -76,6 +104,10 @@ footer {
     @include respond-to(medium) {
       width: 50%;
       text-align: left;
+    }
+    @include respond-to(phone) {
+      width: 100%;
+      text-align: center;
     }
     a {
       color: inherit;
@@ -91,6 +123,9 @@ footer {
     .socials {
       @include respond-to(medium) {
         float: left;
+      }
+      @include respond-to(phone) {
+        float: none;
       }
       a {
         color: #b6b6b6;

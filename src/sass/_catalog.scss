@@ -15,6 +15,9 @@
       @include respond-to(laptop) {
         padding-right: 45px;
       }
+      @include respond-to(medium) {
+        padding-right: 45px;
+      }
       .item {
         padding: 10px 0;
         line-height: 1.5rem;
@@ -123,7 +126,10 @@
       padding: 0 40px;
     }
     @include respond-to(laptop) {
-      padding: 0 40px;
+      padding: 0 20px 0 30px;
+    }
+    @include respond-to(medium) {
+      padding: 0 10px 0 25px;
     }
     .catalog-options {
       margin: 20px 0;
@@ -132,6 +138,9 @@
         list-style: none;
         margin-right: 80px;
         @include respond-to(laptop) {
+          margin-right: 24px;
+        }
+        @include respond-to(medium) {
           margin-right: 24px;
         }
         .option {
@@ -144,6 +153,9 @@
             border-bottom: none;
             margin-right: 20px;
             @include respond-to(laptop) {
+              margin-right: 10px;
+            }
+            @include respond-to(medium) {
               margin-right: 10px;
             }
           }
@@ -177,6 +189,9 @@
       .product {
         width: 25%;
         @include respond-to(laptop) {
+          width: 33%;
+        }
+        @include respond-to(medium) {
           width: 33%;
         }
       }

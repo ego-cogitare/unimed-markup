@@ -12,6 +12,9 @@
     @include respond-to(laptop) {
       width: calc(25% - 40px);
     }
+    @include respond-to(medium) {
+      width: calc(33.33333333% - 40px);
+    }
     .picture {
       position: relative;
       height: calc(25vw - 140px);
@@ -21,6 +24,9 @@
       }
       @include respond-to(laptop) {
         height: calc(25vw - 46px);
+      }
+      @include respond-to(medium) {
+        height: calc(33vw - 48px);
       }
       img {
         transition: all 0.3s 0s;
@@ -39,6 +45,9 @@
       font-size: 1.1rem;
       padding: 50px 0 14px;
       @include respond-to(laptop) {
+        padding: 20px 0 14px;
+      }
+      @include respond-to(medium) {
         padding: 20px 0 14px;
       }
     }

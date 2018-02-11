@@ -13,6 +13,9 @@
     @include respond-to(laptop) {
       width: calc(100% - 265px);
     }
+    @include respond-to(medium) {
+      width: calc(100% - 265px);
+    }
     .posts {
       .post {
         margin-bottom: 92px;
@@ -42,6 +45,9 @@
       width: 300px;
     }
     @include respond-to(laptop) {
+      width: 265px;
+    }
+    @include respond-to(medium) {
       width: 265px;
     }
     .widgets {

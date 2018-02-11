@@ -4,6 +4,9 @@
   .product {
     width: 20%;
     text-align: center;
+    @include respond-to(medium) {
+      width: 33.333333%;
+    }
     .icon {
       display: none;
       height: 32px;
@@ -71,6 +74,9 @@
         }
         @include respond-to(laptop) {
           height: 170px;
+        }
+        @include respond-to(medium) {
+          height: 240px;
         }
         img {
           max-height: 95%;

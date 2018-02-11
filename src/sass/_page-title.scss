@@ -4,7 +4,14 @@
   text-align: center;
   height: 131px;
   margin-bottom: 55px;
+  @include respond-to(medium) {
+    margin-bottom: 35px;
+    height: 101px;
+  }
   .breadcumbs {
     padding: 36px 0 16px;
+    @include respond-to(medium) {
+      padding: 26px 0 10px;
+    }
   }
 }

@@ -6,6 +6,9 @@
     @include respond-to(laptop) {
       width: 50%;
     }
+    @include respond-to(medium) {
+      width: 50%;
+    }
     .post-wrapper {
       width: calc(100% - 80px);
       @include respond-to(hd) {
@@ -15,6 +18,9 @@
         width: calc(100% - 40px);
       }
       @include respond-to(laptop) {
+        width: calc(100% - 20px);
+      }
+      @include respond-to(medium) {
         width: calc(100% - 20px);
       }
       .picture {
@@ -28,6 +34,9 @@
           height: calc(33vw - 158px);
         }
         @include respond-to(laptop) {
+          height: calc(50vw - 178px);
+        }
+        @include respond-to(medium) {
           height: calc(50vw - 178px);
         }
         &:hover {

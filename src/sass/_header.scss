@@ -30,6 +30,11 @@ header {
         right: 106px;
         max-width: calc(100% - 424px);
       }
+      @include respond-to(medium) {
+        position: absolute;
+        right: 106px;
+        max-width: calc(100% - 424px);
+      }
       .item {
         height: 100%;
         font-size: 1.3rem;
@@ -46,6 +51,11 @@ header {
           line-height: 103px;
           height: 100%;
         }
+        @include respond-to(medium) {
+          padding: 0 15px;
+          line-height: 103px;
+          height: 100%;
+        }
         a {
           text-transform: uppercase;
           text-decoration: none;
@@ -53,6 +63,11 @@ header {
           font: inherit;
           display: block;
           @include respond-to(laptop) {
+            vertical-align: middle;
+            line-height: 20px;
+            display: inline-block;
+          }
+          @include respond-to(medium) {
             vertical-align: middle;
             line-height: 20px;
             display: inline-block;
@@ -70,6 +85,10 @@ header {
       list-style-type: none;
       display: flex;
       @include respond-to(laptop) {
+        right: 0;
+        position: absolute;
+      }
+      @include respond-to(medium) {
         right: 0;
         position: absolute;
       }
@@ -107,6 +126,9 @@ header {
               width: 250px;
             }
             @include respond-to(laptop) {
+              width: 250px;
+            }
+            @include respond-to(medium) {
               width: 250px;
             }
           }

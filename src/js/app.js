@@ -68,6 +68,7 @@ $(document).ready(function() {
       else if (width >= 1280 && width < 1680)  brandSlider.params.slidesPerView = 5;
       else if (width >= 1024 && width < 1280)  brandSlider.params.slidesPerView = 4;
       else if (width >= 768 && width < 1024)   brandSlider.params.slidesPerView = 3;
+      else if (width >= 500 && width < 768)    brandSlider.params.slidesPerView = 3;
       else                                     brandSlider.params.slidesPerView = 1;
       brandSlider.update();
 
@@ -94,10 +95,38 @@ $(document).ready(function() {
     }
   });
 
-  $('.burger-menu').on('click', function() {
+  $('.burger-menu.right-menu').on('click', function() {
     $(this).toggleClass('opened');
-    $('.menu').toggleClass('opened');
-    $('html, body').toggleClass('no-scroll');
+
+    if ($(this).hasClass('opened'))
+    {
+      $('.menu.right').addClass('opened');
+      $('html, body').addClass('no-scroll');
+      $('.burger-menu.left-menu').removeClass('opened')
+        .siblings('.menu.left').removeClass('opened');
+    }
+    else
+    {
+      $('.menu.right').removeClass('opened');
+      $('html, body').removeClass('no-scroll');
+    }
+  });
+
+  $('.burger-menu.left-menu').on('click', function() {
+    $(this).toggleClass('opened');
+
+    if ($(this).hasClass('opened'))
+    {
+      $(this).siblings('.menu.left').addClass('opened');
+      $('html, body').addClass('no-scroll');
+      $('.burger-menu.right-menu').removeClass('opened');
+      $('.menu.right').removeClass('opened');
+    }
+    else
+    {
+      $(this).siblings('.menu.left').removeClass('opened');
+      $('html, body').removeClass('no-scroll');
+    }
   });
 
   $(window).bind('resize', function() {

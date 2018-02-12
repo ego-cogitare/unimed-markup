@@ -15,7 +15,7 @@
     height: 33vw;
   }
   @include respond-to(phone) {
-    height: 33vh;
+    height: 250px;
   }
   .swiper-slide {
     @extend .slider-bg;

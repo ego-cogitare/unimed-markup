@@ -3,6 +3,13 @@
     float: left;
     border-right: 1px solid $light-gray-color;
     margin-bottom: 55px;
+    @include respond-to(phone) {
+      width: 100%;
+      text-align: center;
+      border: none;
+      margin-bottom: 0;
+      padding-top: 28px;
+    }
     .menu {
       list-style: none;
       padding-right: 75px;
@@ -17,6 +24,9 @@
       }
       @include respond-to(medium) {
         padding-right: 45px;
+      }
+      @include respond-to(phone) {
+        padding-right: 0;
       }
       .item {
         padding: 10px 0;
@@ -131,6 +141,11 @@
     @include respond-to(medium) {
       padding: 0 10px 0 25px;
     }
+    @include respond-to(phone) {
+      width: 100%;
+      padding: 0;
+      border: none;
+    }
     .catalog-options {
       margin: 20px 0;
       .options {
@@ -141,6 +156,9 @@
           margin-right: 24px;
         }
         @include respond-to(medium) {
+          margin-right: 24px;
+        }
+        @include respond-to(phone) {
           margin-right: 24px;
         }
         .option {
@@ -156,6 +174,9 @@
               margin-right: 10px;
             }
             @include respond-to(medium) {
+              margin-right: 10px;
+            }
+            @include respond-to(phone) {
               margin-right: 10px;
             }
           }
@@ -192,6 +213,9 @@
           width: 33%;
         }
         @include respond-to(medium) {
+          width: 50%;
+        }
+        @include respond-to(phone) {
           width: 50%;
         }
       }

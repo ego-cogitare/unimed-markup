@@ -14,133 +14,79 @@
   .burger-menu {
     height: 46px;
     display: none;
-    @include respond-to(medium) {
+    top: 3px;
+    right: 3px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    label {
       display: block;
-      top: 3px;
-      right: 3px;
-      width: 40px;
-      height: 40px;
-      position: absolute;
-      label {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      span {
         display: block;
-        width: 100%;
-        height: 100%;
-        cursor: pointer;
-        span {
-          display: block;
+        position: absolute;
+        top: 19px;
+        left: 5px;
+        right: 4px;
+        height: 4px;
+        background: #fff;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        &:before,
+        &:after {
           position: absolute;
-          top: 19px;
-          left: 5px;
-          right: 4px;
+          display: block;
+          left: 0;
+          width: 100%;
           height: 4px;
-          background: #fff;
+          background-color: #fff;
+          content: "";
           -webkit-transition: all .3s ease;
           transition: all .3s ease;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-          user-select: none;
-          &:before,
-          &:after {
-            position: absolute;
-            display: block;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background-color: #fff;
-            content: "";
-            -webkit-transition: all .3s ease;
-            transition: all .3s ease;
-          }
-          &:before {
-            top: -10px;
-          }
-          &:after {
-            bottom: -10px;
-          }
+        }
+        &:before {
+          top: -10px;
+        }
+        &:after {
+          bottom: -10px;
         }
       }
-      &.opened {
-        label {
-          span {
-            background: 0 0;
-            &:after {
-              bottom: 0;
-              transform: rotate(-45deg);
-              background: #fff;
-            }
-            &:before {
-              top: 0;
-              transform: rotate(45deg);
-              background: #fff;
-            }
+    }
+    &.opened {
+      label {
+        span {
+          background: 0 0;
+          &:after {
+            bottom: 0;
+            transform: rotate(-45deg);
+            background: #fff;
+          }
+          &:before {
+            top: 0;
+            transform: rotate(45deg);
+            background: #fff;
           }
         }
       }
     }
+    &.left-menu {
+      left: 3px;
+      right: auto;
+      @include respond-to(medium) {
+        display: none;
+      }
+    }
+    @include respond-to(medium) {
+      display: block;
+    }
     @include respond-to(phone) {
       display: block;
-      top: 3px;
-      right: 3px;
-      width: 40px;
-      height: 40px;
-      position: absolute;
-      label {
-        display: block;
-        width: 100%;
-        height: 100%;
-        cursor: pointer;
-        span {
-          display: block;
-          position: absolute;
-          top: 19px;
-          left: 5px;
-          right: 4px;
-          height: 4px;
-          background: #fff;
-          -webkit-transition: all .3s ease;
-          transition: all .3s ease;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-          user-select: none;
-          &:before,
-          &:after {
-            position: absolute;
-            display: block;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background-color: #fff;
-            content: "";
-            -webkit-transition: all .3s ease;
-            transition: all .3s ease;
-          }
-          &:before {
-            top: -10px;
-          }
-          &:after {
-            bottom: -10px;
-          }
-        }
-      }
-      &.opened {
-        label {
-          span {
-            background: 0 0;
-            &:after {
-              bottom: 0;
-              transform: rotate(-45deg);
-              background: #fff;
-            }
-            &:before {
-              top: 0;
-              transform: rotate(45deg);
-              background: #fff;
-            }
-          }
-        }
-      }
     }
   }
   a {
@@ -151,9 +97,30 @@
   }
   .menu {
     list-style-type: none;
+    @include respond-to(phone) {
+      padding-top: 10px;
+      position: fixed;
+      width: 300px;
+      height: calc(100% - 46px);
+      display: block;
+      background: #222224;
+      left: -100%;
+      max-width: initial;
+      z-index: 999;
+      top: 46px;
+      transition: all 0.3s 0s;
+    }
+    &.opened {
+      left: 0;
+    }
     .item {
       display: inline-block;
       font-weight: 400;
+      @include respond-to(phone) {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
       a {
         display: block;
         padding: 0 25px;
@@ -164,10 +131,15 @@
         @include respond-to(phone) {
           padding: 0 15px;
           line-height: 46px;
+          color: #ffffff;
         }
         &.active,
         &:hover {
           background-color: $green-color;
+          @include respond-to(phone) {
+            background-color: transparent;
+            color: $green-color;
+          }
         }
       }
     }
@@ -178,7 +150,7 @@
       margin: 12px 50px 0 0;
     }
     @include respond-to(phone) {
-      display: none;
+      margin: 12px 40px 0;
     }
     a {
       border: 2px solid #ffffff;

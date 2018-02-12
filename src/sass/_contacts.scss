@@ -7,6 +7,9 @@
       right: 0;
       margin-right: calc(7% + 15px);
     }
+    @include respond-to(phone) {
+      padding-top: 0;
+    }
     .widgets {
       .widget {
         i {
@@ -35,6 +38,9 @@
       padding-left: 7%;
       padding-bottom: 50px;
     }
+    @include respond-to(phone) {
+      padding-top: 10px;
+    }
     .map-wrapper {
       width: 596px;
       float: left;
@@ -54,6 +60,11 @@
       @include respond-to(medium) {
         width: 100%;
         margin-bottom: 74px;
+      }
+      @include respond-to(phone) {
+        width: 100%;
+        margin-bottom: 0;
+        float: none;
       }
       .map {
         width: 435px;
@@ -75,6 +86,10 @@
           width: 275px;
           height: 239px;
         }
+        @include respond-to(phone) {
+          width: 100%;
+          height: auto;
+        }
         &:before {
           content: '';
           position: absolute;
@@ -85,6 +100,9 @@
           width: calc(50% + 40px);
           background-color: $light-gray-color;
           z-index: -1;
+          @include respond-to(phone) {
+            display: none;
+          }
         }
         &:after {
           content: '';
@@ -116,6 +134,9 @@
             width: 230px;
             height: 305px;
           }
+          @include respond-to(phone) {
+            display: none;
+          }
         }
         iframe {
           width: 435px;
@@ -135,6 +156,10 @@
           @include respond-to(medium) {
             width: 275px;
             height: 239px;
+          }
+          @include respond-to(phone) {
+            width: 100%;
+            height: 100vw;
           }
         }
         .map-label {
@@ -159,6 +184,9 @@
           }
           @include respond-to(medium) {
             right: -56px;
+          }
+          @include respond-to(phone) {
+            display: none;
           }
           &:before {
             content: '';
@@ -194,6 +222,10 @@
           float: right;
           margin-right: calc(7% + 10px);
         }
+      }
+      @include respond-to(phone) {
+        width: 100%;
+        float: none;
       }
       .heading-1 {
         padding-bottom: 14px;

@@ -8,10 +8,17 @@
     margin-bottom: 35px;
     height: 101px;
   }
+  @include respond-to(phone) {
+    height: 92px;
+    margin-bottom: 0;
+  }
   .breadcumbs {
     padding: 36px 0 16px;
     @include respond-to(medium) {
       padding: 26px 0 10px;
+    }
+    @include respond-to(phone) {
+      padding: 18px 0 10px;
     }
   }
 }

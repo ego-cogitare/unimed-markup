@@ -261,6 +261,9 @@ body {
   @include respond-to(medium) {
     width: 200px;
   }
+  @include respond-to(medium) {
+    width: 200px;
+  }
 }
 
 .content {

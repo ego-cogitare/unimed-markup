@@ -46,6 +46,11 @@
       border-top: 1px solid $light-gray-color;
       width: calc(100% - 20px);
       margin-top: 65px;
+      @include respond-to(phone) {
+        width: 100%;
+        margin-top: 30px;
+        text-align: left;
+      }
       .btn-green {
         width: 177px;
         height: 44px;
@@ -53,6 +58,10 @@
         font-size: 0.98rem;
         font-weight: 400;
         margin: 43px 0;
+        @include respond-to(phone) {
+          margin: 10px 0 30px;
+          width: 100%;
+        }
         i {
           margin-right: 10px;
         }
@@ -88,6 +97,9 @@
     }
     .tags-wrapper {
       margin-top: 55px;
+      @include respond-to(phone) {
+        margin-top: 25px;
+      }
       .heading-3 {
         padding-bottom: 8px;
       }
@@ -177,7 +189,7 @@
               margin-right: 10px;
             }
             @include respond-to(phone) {
-              margin-right: 10px;
+              margin: 5px 0;
             }
           }
           &.active {

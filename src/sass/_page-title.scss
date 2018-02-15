@@ -9,7 +9,8 @@
     height: 101px;
   }
   @include respond-to(phone) {
-    height: 92px;
+    height: auto;
+    min-height: 92px;
     margin-bottom: 0;
   }
   .breadcumbs {

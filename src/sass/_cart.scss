@@ -13,7 +13,13 @@
   @include respond-to(medium) {
     width: 100%;
   }
+  @include respond-to(phone) {
+    width: 100%;
+  }
   .cart-products {
+    @include respond-to(phone) {
+      padding-top: 20px;
+    }
     .heading {
       background-color: $green-color;
       height: 42px;
@@ -22,6 +28,9 @@
       color: #ffffff;
       font-weight: 600;
       font-size: 1.3rem;
+      @include respond-to(phone) {
+        display: none;
+      }
     }
     .product {
       height: 126px;
@@ -30,12 +39,34 @@
         height: 90px;
         line-height: 90px;
       }
+      @include respond-to(phone) {
+        height: 70px;
+        padding: 5px 0;
+        line-height: 60px;
+        position: relative;
+      }
       .picture {
+        @include respond-to(phone) {
+          height: 60px;
+          width: 60px !important;
+          line-height: 60px;
+          padding-left: 0 !important;
+        }
         img {
           vertical-align: middle;
+          max-width: 100%;
+          max-height: 100%;
         }
       }
       .description {
+        @include respond-to(phone) {
+          height: 20px;
+          line-height: 20px;
+          display: block;
+          position: absolute;
+          white-space: nowrap;
+          left: 70px;
+        }
         a {
           color: inherit;
           text-decoration: none;
@@ -44,7 +75,34 @@
           }
         }
       }
+      .sku {
+        @include respond-to(phone) {
+          height: 20px;
+          line-height: 20px;
+          display: block;
+          position: absolute;
+          white-space: nowrap;
+          left: 70px;
+          top: 23px;
+        }
+      }
+      .price {
+        @include respond-to(phone) {
+          height: 20px;
+          line-height: 20px;
+          display: block;
+          position: absolute;
+          white-space: nowrap;
+          left: 70px;
+          top: 40px;
+        }
+      }
       .count {
+        @include respond-to(phone) {
+          position: absolute;
+          right: 36px;
+          width: 40px !important;
+        }
         .cart-counter {
           border: 2px solid darken($light-gray-color, 5);
           line-height: 28px;
@@ -56,11 +114,23 @@
           @include respond-to(medium) {
             margin-top: 30px;
           }
+          @include respond-to(phone) {
+            margin: 0;
+            width: 36px;
+            height: 60px;
+            position: relative;
+            border: none;
+          }
           .amount {
             border: 2px solid darken($light-gray-color, 5);
             border-top: none;
             border-bottom: none;
             width: 39px;
+            @include respond-to(phone) {
+              line-height: 60px;
+              border: none;
+              width: auto;
+            }
           }
           .dec,
           .inc {
@@ -69,6 +139,15 @@
             font-size: 1.5rem;
             line-height: 28px;
             color: darken($light-gray-color, 30);
+            @include respond-to(phone) {
+              right: 0;
+              position: absolute;
+            }
+          }
+          .inc {
+            @include respond-to(phone) {
+              bottom: 0;
+            }
           }
           & > div {
             float: left;
@@ -77,6 +156,9 @@
       }
       .total {
         font-size: 1.25rem;
+        @include respond-to(phone) {
+          display: none;
+        }
       }
     }
     .product-remove {
@@ -89,6 +171,13 @@
       @include respond-to(medium) {
         text-align: right;
         padding-right: 0;
+      }
+      @include respond-to(phone) {
+        text-align: right;
+        padding-right: 0;
+        position: absolute;
+        right: 0;
+        margin-top: 5px;
       }
       i {
         cursor: pointer;
@@ -109,6 +198,10 @@
           width: 85px;
           padding-left: 10px;
         }
+        @include respond-to(phone) {
+          width: 85px;
+          padding-left: 10px;
+        }
       }
       &:nth-child(2) {
         width: 323px;
@@ -116,6 +209,9 @@
           width: 290px;
         }
         @include respond-to(medium) {
+          width: calc(100% - 558px);
+        }
+        @include respond-to(phone) {
           width: calc(100% - 558px);
         }
       }
@@ -127,6 +223,9 @@
         @include respond-to(medium) {
           width: 112px;
         }
+        @include respond-to(phone) {
+          width: 112px;
+        }
       }
       &:nth-child(4) {
         width: 180px;
@@ -136,6 +235,9 @@
         @include respond-to(medium) {
           width: 120px;
         }
+        @include respond-to(phone) {
+          width: 120px;
+        }
       }
       &:nth-child(5) {
         width: 145px;
@@ -143,6 +245,9 @@
           width: 106px;
         }
         @include respond-to(medium) {
+          width: 80px;
+        }
+        @include respond-to(phone) {
           width: 80px;
         }
       }
@@ -156,6 +261,12 @@
     line-height: 58px;
     text-align: right;
     padding-right: 10px;
+    @include respond-to(phone) {
+      height: 40px;
+      line-height: 41px;
+      text-align: right;
+      padding-right: 0;
+    }
     .input {
       border: 1px solid $light-gray-color;
       width: 185px;
@@ -182,11 +293,22 @@
       padding-top: 70px;
       padding-bottom: 60px;
     }
+    @include respond-to(phone) {
+      padding-top: 50px;
+      padding-bottom: 60px;
+    }
     .customer-info {
       width: 50%;
       float: left;
+      @include respond-to(phone) {
+        width: 100%;
+        padding-bottom: 50px;
+      }
       .heading-1 {
         padding-bottom: 40px;
+        @include respond-to(phone) {
+          padding-bottom: 10px;
+        }
       }
       .customer-form {
         label {
@@ -198,6 +320,9 @@
             height: 26px;
             border-bottom: 1px solid $light-gray-color;
             padding: 0;
+            @include respond-to(phone) {
+              width: 100%;
+            }
           }
           .textarea {
             margin-top: 6px;
@@ -215,15 +340,27 @@
     .delivery-payment-info {
       width: 50%;
       float: left;
+      @include respond-to(phone) {
+        width: 100%;
+      }
       .heading-1 {
         padding-bottom: 40px;
+        @include respond-to(phone) {
+          padding-bottom: 10px;
+        }
       }
       .delivery,
       .payment {
         padding-bottom: 50px;
+        @include respond-to(phone) {
+          padding-bottom: 30px;
+        }
       }
       .btn-green {
         display: inline-block;
+        @include respond-to(phone) {
+          width: 100%;
+        }
       }
       .radio-label {
         position: relative;
@@ -231,6 +368,9 @@
         padding-left: 26px;
         width: 400px;
         height: 35px;
+        @include respond-to(phone) {
+          width: 100%;
+        }
         &:before {
           display: block;
           content: '';

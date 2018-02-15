@@ -72,9 +72,12 @@ $(document).ready(function() {
       else                                     brandSlider.params.slidesPerView = 1;
       brandSlider.update();
 
-      if (width >= 768 && width < 1024) {
-        $('.awards').insertBefore($('.general-info'));
-      }
+      // if (width < 768) {
+      //   $('.awards').appendTo($('.product-picture'));
+      // }
+      // if (width >= 768 && width < 1024) {
+      //   $('.awards').insertBefore($('.general-info'));
+      // }
     });
   }
 
@@ -85,7 +88,7 @@ $(document).ready(function() {
     // scale: [0, 25, 50, 75, 100],
     scale: [],
     format: '%s',
-    width: 'calc(100% - 25px)',
+    width: $('body').width() > 767 ? 'calc(100% - 25px)' : 'calc(100% - 10px)',
     showLabels: false,
     isRange : true,
     onstatechange: function(value) {
@@ -132,6 +135,9 @@ $(document).ready(function() {
   $(window).bind('resize', function() {
     var width = $('body').width();
 
+    if (width < 768) {
+      $('.awards').appendTo($('.product-picture'));
+    }
     if (width >= 768 && width < 1024) {
       $('.awards').insertBefore($('.general-info'));
     }

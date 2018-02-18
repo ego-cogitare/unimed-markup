@@ -221,7 +221,7 @@ header {
               width: 250px;
             }
             @include respond-to(phone) {
-              width: calc(100vw - 125px);
+              width: calc(100vw - 117px);
             }
           }
         }

@@ -70,6 +70,9 @@
         a {
           color: inherit;
           text-decoration: none;
+          display: inline-block;
+          line-height: 20px;
+          vertical-align: middle;
           &:hover {
             color: $green-color;
           }
@@ -192,6 +195,10 @@
       &:nth-child(1) {
         width: 183px;
         padding-left: 40px;
+        @include respond-to(notebook) {
+          width: 140px;
+          padding-left: 20px;
+        }
         @include respond-to(laptop) {
           width: 120px;
           padding-left: 30px;
@@ -211,7 +218,7 @@
           width: 290px;
         }
         @include respond-to(medium) {
-          width: calc(100% - 558px);
+          width: calc(100% - 562px);
         }
         @include respond-to(phone) {
           width: calc(100% - 150px);
@@ -221,6 +228,9 @@
       }
       &:nth-child(3) {
         width: 180px;
+        @include respond-to(notebook) {
+          width: 140px;
+        }
         @include respond-to(laptop) {
           width: 130px;
         }
@@ -257,6 +267,10 @@
       }
       &:nth-child(6) {
         width: 126px;
+      }
+      &:nth-child(7) {
+        float: right;
+        padding-right: 20px;
       }
     }
   }

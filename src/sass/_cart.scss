@@ -142,10 +142,12 @@
             @include respond-to(phone) {
               right: 0;
               position: absolute;
+              top: 0;
             }
           }
-          .inc {
+          .dec {
             @include respond-to(phone) {
+              top: 33px;
               bottom: 0;
             }
           }
@@ -212,7 +214,9 @@
           width: calc(100% - 558px);
         }
         @include respond-to(phone) {
-          width: calc(100% - 558px);
+          width: calc(100% - 150px);
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
       }
       &:nth-child(3) {

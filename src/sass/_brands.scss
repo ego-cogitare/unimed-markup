@@ -1,7 +1,5 @@
 #brands-slider {
   .swiper-wrapper {
-    display: flex;
-    justify-content: space-between;
     list-style: none;
     .swiper-slide {
       @extend .slider-bg;

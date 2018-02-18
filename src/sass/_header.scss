@@ -194,6 +194,7 @@ header {
       }
       .search {
         background-color: #ffffff;
+        white-space: nowrap;
         .input {
           font-size: 1rem;
           width: 0;
@@ -220,7 +221,7 @@ header {
               width: 250px;
             }
             @include respond-to(phone) {
-              width: calc(100vw - 125px);
+              width: calc(100vw - 133px);
             }
           }
         }

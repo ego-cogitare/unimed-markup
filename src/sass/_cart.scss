@@ -337,6 +337,9 @@
             width: 109px;
             float: left;
             padding-top: 6px;
+            @include respond-to(phone) {
+              width: 100%;
+            }
           }
         }
       }

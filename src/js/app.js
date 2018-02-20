@@ -132,6 +132,17 @@ $(document).ready(function() {
     }
   });
 
+  $('#buy-in-click').on('click', function() {
+    $('html, body').addClass('no-scroll');
+    $('#buy-in-click-popup').addClass('opened');
+  });
+
+
+  $('#buy-in-click-popup').find('.close').on('click', function() {
+    $(this).parent().removeClass('opened');
+    $('html, body').removeClass('no-scroll');
+  });
+
   $(window).bind('resize', function() {
     var width = $('body').width();
 

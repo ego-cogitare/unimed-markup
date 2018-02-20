@@ -503,4 +503,23 @@
   .section-header {
     margin: 52px 0 25px;
   }
+
+  + .popup {
+    .buy-in-click {
+      .form-row {
+        padding: 10px 0;
+        &:first-child {
+          padding-top: 0;
+        }
+        .input {
+          border: 1px solid #dcdcdc;
+          padding-left: 8px;
+          height: 38px;
+        }
+      }
+      .btn-green {
+        margin-top: 10px;
+      }
+    }
+  }
 }

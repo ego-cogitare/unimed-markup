@@ -72,7 +72,7 @@
             </div>
             <div class="clear buy-btns">
               <div class="btn btn-green left">добавить в корзину</div>
-              <div class="btn left">купить в один клик</div>
+              <div class="btn left" id="buy-in-click">купить в один клик</div>
             </div>
             <div class="hr"></div>
             <div class="tabs-wrapper">
@@ -200,6 +200,23 @@
         </p>
       </div>
     </div>
+    <div class="popup" id="buy-in-click-popup">
+      <i class="fa fa-remove close"></i>
+      <div class="buy-in-click">
+        <div class="form-row">
+          <span class="fw-600 left">Ваше имя:</span>
+          <input type="text" class="input w100p" placeholder="Ваше имя" />
+          <small class="color-red no-wrap">Не заполнено имя.</small>
+        </div>
+        <div class="form-row">
+          <span class="fw-600 left">Номер телефона: *</span>
+          <input type="text" class="input w100p" placeholder="Ваш номер телефона" />
+          <small class="color-green no-wrap">Не заполнено имя.</small>
+        </div>
+        <div class="btn-green">перезвоните мне</div>
+      </div>
+    </div>
+    <div class="curtain"></div>
     {{> advertising-services }}
     {{> footer }}
   </body>

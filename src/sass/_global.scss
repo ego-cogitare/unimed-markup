@@ -195,6 +195,7 @@ body {
   text-decoration: none;
   padding: 0 15px;
   border: 2px solid #000000;
+  user-select: none;
 }
 
 .btn-green {
@@ -218,6 +219,61 @@ body {
 
 .color-red {
   color: $red-color;
+}
+
+.curtain {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.0;
+  background: #000;
+  transition: opacity 0.5s 0.0s;
+  z-index: 1;
+  display: none;
+}
+
+.popup {
+  position: fixed;
+  opacity: 0;
+  width: 400px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 15px;
+  border: 5px solid $green-color;
+  transition: opacity 0.8s 0.0s;
+  z-index: 1;
+  display: none;
+  @include respond-to(medium) {
+    width: 60%;
+  }
+  @include respond-to(phone) {
+    width: 90%;
+  }
+  .close {
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    line-height: 30px;
+    top: 0;
+    cursor: pointer;
+  }
+  &.opened {
+    opacity: 1.0;
+    z-index: 101;
+    display: block;
+    + .curtain {
+      opacity: 0.9;
+      z-index: 100;
+      display: block;
+    }
+  }
 }
 
 .heading-1, H1 {

@@ -96,6 +96,8 @@
           bottom: 10px;
           left: 50%;
           transform: translateX(-50%);
+          min-height: 95%;
+          object-fit: contain;
         }
       }
       .title {

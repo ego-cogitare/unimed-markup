@@ -6,6 +6,8 @@
   .post {
     width: calc(25% - 90px);
     margin-bottom: 50px;
+    text-decoration: none;
+    color: inherit;
     @include respond-to(notebook) {
       width: calc(25% - 60px);
     }

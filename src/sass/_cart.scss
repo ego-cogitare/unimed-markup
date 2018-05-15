@@ -59,6 +59,11 @@
         }
       }
       .description {
+        height: 120px;
+        overflow: hidden;
+        @include respond-to(medium) {
+          height: 80px;
+        }
         @include respond-to(phone) {
           height: 20px;
           line-height: 20px;

@@ -138,9 +138,12 @@
             display: none;
           }
         }
-        iframe {
+        iframe,
+        .map-canvas {
           width: 435px;
           height: 378px;
+          z-index: 999;
+          position: relative;
           @include respond-to(hd) {
             width: 335px;
             height: 291px;

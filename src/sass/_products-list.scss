@@ -4,6 +4,8 @@
   .product {
     width: 20%;
     text-align: center;
+    text-decoration: none;
+    color: inherit;
     @include respond-to(medium) {
       width: 33.333333%;
     }
